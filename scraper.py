@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """
-STELLA NRW Stellenscraper – Version 5
+STELLA NRW Stellenscraper – Version 6
+- Vollständiger Zellentext Spalte 0 (ganzer <td>-Inhalt sauber)
+- Geocoding auf Schulebene: Schulname + Ort → genaue Koordinaten
 - Radius 25 km um Dortmund
-- Vollständiger Zellentext Spalte 0 (nicht nur <strong>)
-- Geocoding der Ortsnamen via Nominatim → lat/lon in JSON
-- first_seen: Datum der Erstentdeckung wird dauerhaft gespeichert
+- first_seen Tracking
 """
 
 import json
@@ -21,10 +21,10 @@ from bs4 import BeautifulSoup
 BASE        = "https://www.schulministerium.nrw.de"
 START_URL   = BASE + "/BiPo/Stella"
 OUTPUT_FILE = "docs/stellen.json"
-SEEN_FILE   = "docs/first_seen.json"   # persistente Erstentdeckungs-Datei
+SEEN_FILE   = "docs/first_seen.json"
 
 DORTMUND_ORT_VALUE = "913000"
-RADIUS_KM          = "25"             # ← auf 25 km reduziert
+RADIUS_KM          = "25"
 
 HEADERS = {
     "User-Agent": (
@@ -41,81 +41,62 @@ HEADERS = {
 
 _geo_cache = {}
 
-# Bekannte NRW-Städte mit festen Koordinaten → spart Nominatim-Anfragen
-GEO_VORRAT = {
-    "dortmund":       (51.5136, 7.4653),
-    "bochum":         (51.4818, 7.2162),
-    "essen":          (51.4556, 7.0116),
-    "herne":          (51.5369, 7.2197),
-    "gelsenkirchen":  (51.5177, 7.0857),
-    "recklinghausen": (51.6141, 7.1974),
-    "hamm":           (51.6739, 7.8152),
-    "datteln":        (51.6544, 7.3411),
-    "castrop-rauxel": (51.5528, 7.3127),
-    "lünen":          (51.6161, 7.5255),
-    "werne":          (51.6647, 7.6336),
-    "selm":           (51.6989, 7.4697),
-    "bergkamen":      (51.6161, 7.6297),
-    "kamen":          (51.5936, 7.6639),
-    "unna":           (51.5353, 7.6886),
-    "schwerte":       (51.4461, 7.5636),
-    "iserlohn":       (51.3748, 7.6949),
-    "hagen":          (51.3671, 7.4633),
-    "witten":         (51.4439, 7.3350),
-    "herdecke":       (51.4014, 7.4317),
-    "wetter":         (51.3883, 7.3953),
-    "marl":           (51.6572, 7.0883),
-    "haltern am see": (51.7406, 7.1817),
-    "herten":         (51.5961, 7.1358),
-    "gladbeck":       (51.5706, 6.9897),
-    "bottrop":        (51.5236, 6.9289),
-    "oberhausen":     (51.4697, 6.8517),
-    "dinslaken":      (51.5661, 6.7394),
-    "duisburg":       (51.4344, 6.7623),
-    "mülheim an der ruhr": (51.4275, 6.8825),
-    "düsseldorf":     (51.2217, 6.7762),
-    "wuppertal":      (51.2562, 7.1508),
-    "solingen":       (51.1731, 7.0831),
-    "remscheid":      (51.1786, 7.1894),
-    "münster":        (51.9607, 7.6261),
-    "köln":           (50.9333, 6.9500),
-    "bonn":           (50.7358, 7.0982),
-    "siegen":         (50.8748, 8.0243),
-    "arnsberg":       (51.3956, 8.0636),
-    "lüdenscheid":    (51.2197, 7.6286),
-    "plettenberg":    (51.2072, 7.8697),
-    "iserlohn":       (51.3748, 7.6949),
-}
-
-def koordinaten(ort: str):
-    if not ort:
-        return None, None
-    key = ort.strip().lower()
+def geo_suche(query: str) -> tuple:
+    """Sucht via Nominatim. Gibt (lat, lon) oder (None, None) zurück."""
+    key = query.strip().lower()
     if key in _geo_cache:
         return _geo_cache[key]
-    # Vorrat prüfen
-    if key in GEO_VORRAT:
-        _geo_cache[key] = GEO_VORRAT[key]
-        return GEO_VORRAT[key]
-    # Nominatim
     try:
         r = requests.get(
             "https://nominatim.openstreetmap.org/search",
-            params={"q": f"{ort}, Nordrhein-Westfalen", "format": "json",
-                    "limit": 1, "countrycodes": "de"},
-            headers={"User-Agent": "STELLA-Scraper/5.0"},
-            timeout=10
+            params={
+                "q": query,
+                "format": "json",
+                "limit": 1,
+                "countrycodes": "de",
+                "addressdetails": 0,
+            },
+            headers={"User-Agent": "STELLA-NRW-Scraper/6.0 (schulstellen@nrw)"},
+            timeout=12,
         )
         data = r.json()
         if data:
             result = (float(data[0]["lat"]), float(data[0]["lon"]))
             _geo_cache[key] = result
-            time.sleep(1.1)   # Nominatim fair-use: max 1 req/s
+            time.sleep(1.1)  # Nominatim fair-use: max 1 req/s
             return result
     except Exception as e:
-        print(f"    Geo-Fehler für '{ort}': {e}")
+        print(f"    Geo-Fehler '{query}': {e}")
     _geo_cache[key] = (None, None)
+    time.sleep(0.5)
     return None, None
+
+
+def koordinaten_fuer_stelle(schulname: str, ort: str) -> tuple:
+    """
+    Versucht in dieser Reihenfolge:
+    1. Schulname + Ort + NRW
+    2. Schulname + NRW
+    3. Nur Ort + NRW
+    """
+    if schulname and ort:
+        # Schulname bereinigen (Kürzel wie "Städt." entfernen stört manchmal)
+        lat, lon = geo_suche(f"{schulname}, {ort}, Nordrhein-Westfalen")
+        if lat:
+            return lat, lon
+        # Fallback: nur erste Wörter des Schulnamens
+        kurzname = " ".join(schulname.split()[:4])
+        lat, lon = geo_suche(f"{kurzname}, {ort}, Nordrhein-Westfalen")
+        if lat:
+            return lat, lon
+
+    if ort:
+        lat, lon = geo_suche(f"{ort}, Nordrhein-Westfalen")
+        if lat:
+            return lat, lon
+
+    return None, None
+
 
 # ── HTTP ──────────────────────────────────────────────────────────────────────
 
@@ -144,7 +125,36 @@ def abs_url(href):
         return ""
     return BASE + href if href.startswith("/") else href
 
+
 # ── Ergebnisse parsen ─────────────────────────────────────────────────────────
+
+def zellentext_vollstaendig(td) -> str:
+    """
+    Extrahiert den vollständigen Text einer <td>-Zelle.
+    Zeilenumbrüche entstehen bei <br>, <p>, Block-Elementen.
+    Inline-Links (<a>) werden als Text behalten.
+    Unsichtbare Elemente (class='unsichtbar') werden entfernt.
+    """
+    # Unsichtbare Elemente vorab entfernen (STELLA-Screenreader-Texte)
+    for el in td.find_all(class_="unsichtbar"):
+        el.decompose()
+
+    # Zeilenumbrüche normalisieren
+    for br in td.find_all("br"):
+        br.replace_with("\n")
+    for p in td.find_all("p"):
+        p.insert_before("\n")
+        p.unwrap()
+
+    text = td.get_text(separator="\n")
+    # Zeilen bereinigen
+    zeilen = []
+    for z in text.split("\n"):
+        z = z.strip()
+        if z:
+            zeilen.append(z)
+    return "\n".join(zeilen)
+
 
 def parse_ergebnisseite(soup, kategorie_id):
     stellen = []
@@ -156,80 +166,80 @@ def parse_ergebnisseite(soup, kategorie_id):
         if len(tds) < 3:
             continue
 
-        def td_text(i):
-            if i < len(tds):
-                return tds[i].get_text(separator="\n", strip=True)
-            return ""
+        # ── Spalte 0: Vollständiger Zelleninhalt ──────────────────────────────
+        td0_voll = zellentext_vollstaendig(tds[0])
+        zeilen0  = [z for z in td0_voll.split("\n") if z]
 
-        # ── Spalte 0: Vollständiger Text (nicht nur <strong>) ──
-        # Titel = <strong>-Text
-        strong = tds[0].find("strong")
-        titel = strong.get_text(strip=True) if strong else ""
+        # Titel = erste Zeile (war ursprünglich <strong>)
+        strong   = tds[0].find("strong")
+        titel    = strong.get_text(strip=True) if strong else (zeilen0[0] if zeilen0 else "")
 
-        # Beschreibung = gesamter Zellentext OHNE den <strong>-Part
-        # Wir holen alle Textknoten die nach dem <strong> kommen
-        zelle0_voll = tds[0].get_text(separator="\n", strip=True)
-        # Titel-Zeile aus dem Volltext entfernen
-        beschreibung = ""
-        if titel and titel in zelle0_voll:
-            rest = zelle0_voll.replace(titel, "", 1).strip()
-            # Erste nicht-leere Zeilen als Beschreibung
-            zeilen_rest = [z.strip() for z in rest.split("\n") if z.strip()]
-            beschreibung = "\n".join(zeilen_rest[:4])  # max 4 Zeilen
-        elif not titel:
-            zeilen0 = [z.strip() for z in zelle0_voll.split("\n") if z.strip()]
-            titel = zeilen0[0] if zeilen0 else ""
-            beschreibung = "\n".join(zeilen0[1:4]) if len(zeilen0) > 1 else ""
+        # Beschreibung = ALLE weiteren Zeilen aus Spalte 0
+        if titel and zeilen0 and zeilen0[0] == titel:
+            beschreibung_zeilen = zeilen0[1:]
+        else:
+            beschreibung_zeilen = zeilen0[1:] if zeilen0 else []
 
-        # Detail-Link (aus Spalte 4 "Weitere Hinweise")
+        # "Weitere Hinweise"-Zeile rausfiltern (ist Link-Text, kein Inhalt)
+        beschreibung_zeilen = [z for z in beschreibung_zeilen
+                               if "weitere hinweise" not in z.lower()]
+        beschreibung = "\n".join(beschreibung_zeilen).strip()
+
+        # ── Detail-Link (Spalte 4) ────────────────────────────────────────────
         link_tag   = tds[4].find("a", href=True) if len(tds) > 4 else None
         detail_url = abs_url(link_tag["href"]) if link_tag else ""
 
-        # ── Spalte 2: Dienstort + Schulname ──
-        ort_raw    = td_text(2)
-        ort_zeilen = [z.strip() for z in ort_raw.split("\n") if z.strip()]
+        # ── Spalte 2: Dienstort + Schulname ──────────────────────────────────
+        td2_voll   = zellentext_vollstaendig(tds[2])
+        ort_zeilen = [z for z in td2_voll.split("\n") if z]
         ort        = ort_zeilen[0] if ort_zeilen else ""
         schulname  = ""
-        for z in ort_zeilen[2:]:
-            if len(z) > 5 and "öffentliche" not in z and "Ersatz" not in z:
+        for z in ort_zeilen:
+            if ("öffentliche" in z.lower() or "ersatzschule" in z.lower()
+                    or z == ort):
+                continue
+            if len(z) > 5:
                 schulname = z
                 break
 
-        # ── Spalte 1: Besoldung ──
-        besoldung = td_text(1).split("\n")[0].strip()
+        # ── Spalte 1: Besoldung ───────────────────────────────────────────────
+        td1_voll  = zellentext_vollstaendig(tds[1])
+        besoldung = td1_voll.split("\n")[0].strip()
 
-        # ── Spalte 7: Bewerbungsfrist ──
-        frist_raw = td_text(7)
-        m = re.search(r"\d{2}\.\d{2}\.\d{4}", frist_raw)
+        # ── Spalte 7: Bewerbungsfrist ─────────────────────────────────────────
+        td7 = zellentext_vollstaendig(tds[7]) if len(tds) > 7 else ""
+        m   = re.search(r"\d{2}\.\d{2}\.\d{4}", td7)
         frist = m.group() if m else ""
 
-        # ── Spalte 5: Besetzungszeitpunkt ──
-        besetzung = td_text(5).split("\n")[0].strip()
+        # ── Spalte 5: Besetzungszeitpunkt ─────────────────────────────────────
+        td5       = zellentext_vollstaendig(tds[5]) if len(tds) > 5 else ""
+        besetzung = td5.split("\n")[0].strip()
 
         stelle = {
-            "titel":       titel[:200],
+            "titel":        titel[:200],
             "beschreibung": beschreibung,
-            "ort":         ort,
-            "schulname":   schulname,
-            "besoldung":   besoldung,
-            "besetzung":   besetzung,
-            "frist":       frist,
-            "url":         detail_url,
-            "kategorie":   kategorie_id,
-            "lat":         None,
-            "lon":         None,
-            "abstand_km":  None,
-            "first_seen":  None,
+            "ort":          ort,
+            "schulname":    schulname,
+            "besoldung":    besoldung,
+            "besetzung":    besetzung,
+            "frist":        frist,
+            "url":          detail_url,
+            "kategorie":    kategorie_id,
+            "lat":          None,
+            "lon":          None,
+            "first_seen":   None,
         }
         stellen.append(stelle)
 
     return stellen
+
 
 def alle_auf_einmal_url(soup):
     for a in soup.find_all("a", href=True):
         if "block=500" in a["href"]:
             return abs_url(a["href"])
     return None
+
 
 # ── Session + Navigation ──────────────────────────────────────────────────────
 
@@ -250,7 +260,8 @@ def setup_session():
         href = a["href"]
         text = a.get_text(strip=True)
         url  = abs_url(href)
-        if "Schulbereich" in text:      kat["schulbereich"] = url
+        if "Schulbereich" in text:
+            kat["schulbereich"] = url
         elif "Zentren" in text or "Fachleiter" in text or "stellenart=4" in href:
             kat["zfsl"] = url
         elif "Schulaufsicht" in text or "stellenart=2" in href:
@@ -259,6 +270,7 @@ def setup_session():
             kat["sonstige"] = url
     print(f"  Kategorien: {list(kat.keys())}")
     return session, kat
+
 
 # ── Formular ──────────────────────────────────────────────────────────────────
 
@@ -271,39 +283,44 @@ def suche_mit_formular(session, form_url, kategorie_id, mit_radius):
         return parse_und_alle(session, form_url, kategorie_id, soup)
 
     action_url = abs_url(form.get("action", ""))
-    post_data  = {i["name"]: i.get("value","")
+    post_data  = {i["name"]: i.get("value", "")
                   for i in form.find_all("input", type="hidden") if i.get("name")}
     post_data["button_suchen"] = "Suche starten"
 
     if mit_radius:
         ort_sel = soup.find("select", {"id": "ort"})
         umk_inp = soup.find("input",  {"id": "umkreis"})
-        if ort_sel: post_data[ort_sel["name"]] = DORTMUND_ORT_VALUE
-        if umk_inp: post_data[umk_inp["name"]] = RADIUS_KM
+        if ort_sel:
+            post_data[ort_sel["name"]] = DORTMUND_ORT_VALUE
+        if umk_inp:
+            post_data[umk_inp["name"]] = RADIUS_KM
 
     ergebnis = post(session, action_url, post_data)
     if not ergebnis:
         return []
     return parse_und_alle(session, action_url, kategorie_id, ergebnis)
 
+
 def parse_und_alle(session, basis_url, kategorie_id, ergebnis_soup=None):
     if ergebnis_soup is None:
         ergebnis_soup = get(session, basis_url)
-        if not ergebnis_soup: return []
+        if not ergebnis_soup:
+            return []
 
     m = re.search(r"(\d+)\s+Stellenausschreibungen?\s+gefunden",
                   ergebnis_soup.get_text())
-    if m: print(f"      STELLA: {m.group(1)} Treffer")
+    if m:
+        print(f"      STELLA: {m.group(1)} Treffer")
 
     url500 = alle_auf_einmal_url(ergebnis_soup)
     if url500:
         time.sleep(1)
         ergebnis_soup = get(session, url500)
-        if not ergebnis_soup: return []
+        if not ergebnis_soup:
+            return []
 
     stellen = parse_ergebnisseite(ergebnis_soup, kategorie_id)
 
-    # Deduplizieren
     gesehen = set()
     unique  = []
     for s in stellen:
@@ -313,12 +330,12 @@ def parse_und_alle(session, basis_url, kategorie_id, ergebnis_soup=None):
             unique.append(s)
     return unique
 
-# ── Schulbereich: Unterseiten ─────────────────────────────────────────────────
 
 def scrape_schulbereich(session, url):
     print("\n📂 Schulstellen (Dortmund + 25 km)")
     soup = get(session, url)
-    if not soup: return []
+    if not soup:
+        return []
     unterseiten = [(a.get_text(strip=True), abs_url(a["href"]))
                    for a in soup.select("ul.suchAuswahl a")]
     if not unterseiten:
@@ -332,28 +349,28 @@ def scrape_schulbereich(session, url):
         time.sleep(2)
     return alle
 
-# ── Geocoding aller Stellen ───────────────────────────────────────────────────
 
-def geocodiere(stellen, nur_kategorien=("schulstellen","zfsl")):
-    print("\n🗺  Geocoding…")
-    orte_eindeutig = set(s["ort"] for s in stellen
-                         if s["kategorie"] in nur_kategorien and s["ort"])
-    print(f"  {len(orte_eindeutig)} eindeutige Orte")
+# ── Geocoding aller relevanten Stellen ───────────────────────────────────────
 
-    for ort in sorted(orte_eindeutig):
-        lat, lon = koordinaten(ort)
-        if lat:
-            print(f"  ✓ {ort}: {lat:.4f}, {lon:.4f}")
-        else:
-            print(f"  ? {ort}: nicht gefunden")
+def geocodiere_alle(stellen, kategorien=("schulstellen", "zfsl")):
+    """
+    Geocodiert jede Stelle einzeln mit Schulname + Ort.
+    Nutzt Cache um doppelte Anfragen zu vermeiden.
+    """
+    print("\n🗺  Geocoding (Schulen + ZfsL)…")
+    relevant = [s for s in stellen if s["kategorie"] in kategorien]
+    print(f"  {len(relevant)} Stellen zu geocodieren")
 
-    for s in stellen:
-        if s["kategorie"] in nur_kategorien and s["ort"]:
-            lat, lon = koordinaten(s["ort"])
-            s["lat"] = lat
-            s["lon"] = lon
+    for i, s in enumerate(relevant):
+        lat, lon = koordinaten_fuer_stelle(s["schulname"], s["ort"])
+        s["lat"] = lat
+        s["lon"] = lon
+        status = f"{lat:.4f}, {lon:.4f}" if lat else "nicht gefunden"
+        name   = (s["schulname"] or s["ort"])[:50]
+        print(f"  [{i+1}/{len(relevant)}] {name}: {status}")
 
-# ── first_seen tracken ────────────────────────────────────────────────────────
+
+# ── first_seen ────────────────────────────────────────────────────────────────
 
 def lade_first_seen():
     if os.path.exists(SEEN_FILE):
@@ -370,21 +387,21 @@ def speichere_first_seen(mapping):
         json.dump(mapping, f, ensure_ascii=False, indent=2)
 
 def stelle_key(s):
-    """Stabiler Key für eine Stelle."""
     return s["url"] or (s["titel"] + "|" + s["ort"])
 
-def setze_first_seen(stellen, first_seen_map):
+def setze_first_seen(stellen, mapping):
     heute = date.today().isoformat()
     for s in stellen:
         key = stelle_key(s)
-        if key not in first_seen_map:
-            first_seen_map[key] = heute
-        s["first_seen"] = first_seen_map[key]
+        if key not in mapping:
+            mapping[key] = heute
+        s["first_seen"] = mapping[key]
+
 
 # ── Hauptprogramm ─────────────────────────────────────────────────────────────
 
 def main():
-    print(f"\n🔍 STELLA NRW Scraper v5 — {datetime.now().strftime('%d.%m.%Y %H:%M')}")
+    print(f"\n🔍 STELLA NRW Scraper v6 — {datetime.now().strftime('%d.%m.%Y %H:%M')}")
     print("=" * 60)
 
     first_seen_map = lade_first_seen()
@@ -411,21 +428,20 @@ def main():
 
     if "schulaufsicht" in kat:
         print("\n📂 Schulaufsicht (ganz NRW)")
-        st = suche_mit_formular(session, kat["schulaufsicht"], "schulaufsicht", mit_radius=False)
+        st = suche_mit_formular(session, kat["schulaufsicht"],
+                                "schulaufsicht", mit_radius=False)
         print(f"→ {len(st)} Schulaufsicht")
         alle.extend(st)
     time.sleep(2)
 
     if "sonstige" in kat:
         print("\n📂 Sonstige Tätigkeiten (ganz NRW)")
-        st = suche_mit_formular(session, kat["sonstige"], "sonstige", mit_radius=False)
+        st = suche_mit_formular(session, kat["sonstige"],
+                                "sonstige", mit_radius=False)
         print(f"→ {len(st)} Sonstige")
         alle.extend(st)
 
-    # Geocoding (nur Schul + ZfsL)
-    geocodiere(alle, nur_kategorien=("schulstellen", "zfsl"))
-
-    # first_seen setzen
+    geocodiere_alle(alle)
     setze_first_seen(alle, first_seen_map)
     speichere_first_seen(first_seen_map)
 
@@ -440,9 +456,11 @@ def main():
         json.dump(output, f, ensure_ascii=False, indent=2)
 
     print(f"\n✅ {len(alle)} Stellen gespeichert.")
-    for k in ["schulstellen","zfsl","schulaufsicht","sonstige"]:
+    for k in ["schulstellen", "zfsl", "schulaufsicht", "sonstige"]:
         n = sum(1 for s in alle if s["kategorie"] == k)
-        print(f"   {k}: {n}")
+        geo = sum(1 for s in alle if s["kategorie"] == k and s["lat"])
+        print(f"   {k}: {n} Stellen, {geo} geocodiert")
+
 
 if __name__ == "__main__":
     main()
