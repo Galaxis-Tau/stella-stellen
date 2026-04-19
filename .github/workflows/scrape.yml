@@ -2,10 +2,8 @@ name: STELLA Stellenscraper
 
 on:
   schedule:
-    # Täglich um 06:00 Uhr UTC (= 07:00 / 08:00 Uhr MEZ/MESZ)
     - cron: "0 6 * * *"
   workflow_dispatch:
-    # Manuell auslösbar über GitHub → Actions → "Run workflow"
 
 jobs:
   scrape:
@@ -21,18 +19,12 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-          cache: "pip"
 
       - name: Abhängigkeiten installieren
         run: pip install requests beautifulsoup4 lxml
 
       - name: Scraper ausführen
         run: python scraper.py
-
-      - name: Ergebnis prüfen
-        run: |
-          echo "=== Erste 30 Zeilen stellen.json ==="
-          head -30 docs/stellen.json || echo "Datei fehlt!"
 
       - name: Änderungen committen und pushen
         run: |
