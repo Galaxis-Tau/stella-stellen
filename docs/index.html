@@ -8,326 +8,151 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <style>
     :root {
-      --bg:        #f4f1eb;
-      --bg2:       #eceade;
-      --ink:       #1a1814;
-      --ink2:      #4a4740;
-      --ink3:      #7a7570;
-      --red:       #c0392b;
-      --red-soft:  #f5e9e8;
-      --blue:      #1a4fa0;
-      --blue-soft: #e8edf8;
-      --teal:      #0d7a6e;
-      --teal-soft: #e4f4f2;
-      --gold:      #b07d2a;
-      --gold-soft: #f5edd8;
-      --border:    rgba(26,24,20,0.12);
-      --shadow:    0 2px 12px rgba(26,24,20,0.08);
-      --shadow-lg: 0 8px 32px rgba(26,24,20,0.12);
-      --radius:    12px;
-      --font-serif: 'DM Serif Display', Georgia, serif;
-      --font-sans:  'DM Sans', system-ui, sans-serif;
+      --bg:#f4f1eb; --bg2:#eceade; --ink:#1a1814; --ink2:#4a4740; --ink3:#7a7570;
+      --red:#c0392b; --red-soft:#f5e9e8;
+      --blue:#1a4fa0; --blue-soft:#e8edf8;
+      --teal:#0d7a6e; --teal-soft:#e4f4f2;
+      --gold:#b07d2a; --gold-soft:#f5edd8;
+      --border:rgba(26,24,20,0.12);
+      --shadow:0 2px 12px rgba(26,24,20,0.08);
+      --shadow-lg:0 8px 32px rgba(26,24,20,0.12);
+      --radius:12px;
+      --font-serif:'DM Serif Display',Georgia,serif;
+      --font-sans:'DM Sans',system-ui,sans-serif;
     }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    body{background:var(--bg);color:var(--ink);font-family:var(--font-sans);font-size:15px;line-height:1.6;min-height:100vh;}
 
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    /* Header */
+    header{background:var(--ink);color:#f4f1eb;padding:40px 40px 28px;position:relative;overflow:hidden;}
+    header::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(-45deg,transparent,transparent 28px,rgba(255,255,255,0.02) 28px,rgba(255,255,255,0.02) 29px);}
+    .header-inner{max-width:1200px;margin:0 auto;position:relative;}
+    .header-label{font-size:11px;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:rgba(244,241,235,0.5);margin-bottom:10px;}
+    header h1{font-family:var(--font-serif);font-size:clamp(26px,5vw,44px);font-weight:400;line-height:1.1;color:#f4f1eb;margin-bottom:10px;}
+    header h1 em{font-style:italic;color:#d4c89a;}
+    .header-sub{font-size:13px;color:rgba(244,241,235,0.6);max-width:540px;}
+    .update-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12);border-radius:20px;padding:4px 12px;font-size:12px;color:rgba(244,241,235,0.7);margin-top:14px;}
+    .update-badge .dot{width:6px;height:6px;border-radius:50%;background:#5ec98a;animation:pulse 2s infinite;}
+    @keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
 
-    body {
-      background: var(--bg);
-      color: var(--ink);
-      font-family: var(--font-sans);
-      font-size: 15px;
-      line-height: 1.6;
-      min-height: 100vh;
-    }
+    /* Filter Bar */
+    .filter-bar{background:#fff;border-bottom:1px solid var(--border);padding:10px 40px;position:sticky;top:0;z-index:200;box-shadow:0 2px 8px rgba(26,24,20,0.06);}
+    .filter-inner{max-width:1200px;margin:0 auto;display:flex;gap:8px;flex-wrap:wrap;align-items:center;}
+    .filter-label{font-size:11px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--ink3);white-space:nowrap;}
 
-    /* ── Header ── */
-    header {
-      background: var(--ink);
-      color: #f4f1eb;
-      padding: 48px 40px 36px;
-      position: relative;
-      overflow: hidden;
-    }
-    header::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: repeating-linear-gradient(
-        -45deg, transparent, transparent 28px,
-        rgba(255,255,255,0.02) 28px, rgba(255,255,255,0.02) 29px
-      );
-    }
-    .header-inner { max-width: 1200px; margin: 0 auto; position: relative; }
-    .header-label {
-      font-size: 11px; font-weight: 500;
-      letter-spacing: 0.15em; text-transform: uppercase;
-      color: rgba(244,241,235,0.5); margin-bottom: 12px;
-    }
-    header h1 {
-      font-family: var(--font-serif);
-      font-size: clamp(28px, 5vw, 48px);
-      font-weight: 400; line-height: 1.1;
-      color: #f4f1eb; margin-bottom: 12px;
-    }
-    header h1 em { font-style: italic; color: #d4c89a; }
-    .header-sub { font-size: 14px; color: rgba(244,241,235,0.6); max-width: 540px; }
-    .update-badge {
-      display: inline-flex; align-items: center; gap: 6px;
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.12);
-      border-radius: 20px; padding: 4px 12px;
-      font-size: 12px; color: rgba(244,241,235,0.7); margin-top: 16px;
-    }
-    .update-badge .dot {
-      width: 6px; height: 6px; border-radius: 50%;
-      background: #5ec98a; animation: pulse 2s infinite;
-    }
-    @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.4} }
+    .chip{display:inline-flex;align-items:center;gap:5px;padding:5px 12px;border-radius:20px;border:1.5px solid var(--border);background:var(--bg);font-family:var(--font-sans);font-size:12px;color:var(--ink2);cursor:pointer;transition:all .18s;user-select:none;}
+    .chip:hover{border-color:var(--ink2);color:var(--ink);}
+    .chip.active{font-weight:500;border-color:currentColor;}
+    .chip.kat-schulstellen.active{background:var(--blue-soft);color:var(--blue);}
+    .chip.kat-zfsl.active{background:var(--teal-soft);color:var(--teal);}
+    .chip.kat-schulaufsicht.active{background:var(--gold-soft);color:var(--gold);}
+    .chip.kat-sonstige.active{background:var(--red-soft);color:var(--red);}
+    .chip .count{background:rgba(0,0,0,0.08);border-radius:10px;padding:0 5px;font-size:11px;font-weight:500;}
 
-    /* ── Filter Bar ── */
-    .filter-bar {
-      background: #fff;
-      border-bottom: 1px solid var(--border);
-      padding: 12px 40px;
-      position: sticky; top: 0; z-index: 100;
-      box-shadow: 0 2px 8px rgba(26,24,20,0.06);
-    }
-    .filter-inner {
-      max-width: 1200px; margin: 0 auto;
-      display: flex; gap: 10px; flex-wrap: wrap; align-items: center;
-    }
-    .filter-label {
-      font-size: 11px; font-weight: 500;
-      letter-spacing: 0.08em; text-transform: uppercase;
-      color: var(--ink3); margin-right: 2px; white-space: nowrap;
-    }
-    .chip {
-      display: inline-flex; align-items: center; gap: 5px;
-      padding: 5px 12px; border-radius: 20px;
-      border: 1.5px solid var(--border); background: var(--bg);
-      font-family: var(--font-sans); font-size: 13px;
-      color: var(--ink2); cursor: pointer;
-      transition: all 0.18s; user-select: none;
-    }
-    .chip:hover { border-color: var(--ink2); color: var(--ink); }
-    .chip.active { font-weight: 500; border-color: currentColor; }
-    .chip.kat-schulstellen.active  { background: var(--blue-soft);  color: var(--blue); }
-    .chip.kat-zfsl.active          { background: var(--teal-soft);  color: var(--teal); }
-    .chip.kat-schulaufsicht.active { background: var(--gold-soft);  color: var(--gold); }
-    .chip.kat-sonstige.active      { background: var(--red-soft);   color: var(--red); }
-    .chip .count {
-      background: rgba(0,0,0,0.08); border-radius: 10px;
-      padding: 0 6px; font-size: 11px; font-weight: 500;
-    }
+    .sort-select{padding:5px 10px;border:1.5px solid var(--border);border-radius:20px;background:var(--bg);font-family:var(--font-sans);font-size:12px;color:var(--ink2);cursor:pointer;outline:none;}
+    .sort-select:focus{border-color:var(--blue);}
 
-    /* Sortier-Select */
-    .sort-select {
-      padding: 5px 10px;
-      border: 1.5px solid var(--border);
-      border-radius: 20px;
-      background: var(--bg);
-      font-family: var(--font-sans);
-      font-size: 13px;
-      color: var(--ink2);
-      cursor: pointer;
-      outline: none;
-    }
-    .sort-select:focus { border-color: var(--blue); }
+    .search-wrap{margin-left:auto;position:relative;}
+    .search-wrap svg{position:absolute;left:10px;top:50%;transform:translateY(-50%);color:var(--ink3);pointer-events:none;}
+    #search-input{padding:6px 14px 6px 34px;border:1.5px solid var(--border);border-radius:20px;background:var(--bg);font-family:var(--font-sans);font-size:12px;color:var(--ink);outline:none;width:200px;transition:border-color .18s;}
+    #search-input:focus{border-color:var(--blue);}
 
-    /* Suche */
-    .search-wrap { margin-left: auto; position: relative; }
-    .search-wrap svg {
-      position: absolute; left: 10px; top: 50%;
-      transform: translateY(-50%); color: var(--ink3); pointer-events: none;
-    }
-    #search-input {
-      padding: 6px 14px 6px 34px;
-      border: 1.5px solid var(--border); border-radius: 20px;
-      background: var(--bg); font-family: var(--font-sans);
-      font-size: 13px; color: var(--ink); outline: none; width: 210px;
-      transition: border-color 0.18s;
-    }
-    #search-input:focus { border-color: var(--blue); }
+    /* Ansichts-Tabs */
+    .view-tabs{display:flex;gap:0;border:1.5px solid var(--border);border-radius:20px;overflow:hidden;background:var(--bg);flex-shrink:0;}
+    .view-tab{padding:5px 14px;font-size:12px;font-family:var(--font-sans);color:var(--ink2);cursor:pointer;border:none;background:none;transition:all .18s;display:flex;align-items:center;gap:5px;}
+    .view-tab:hover{background:var(--bg2);}
+    .view-tab.active{background:var(--ink);color:#f4f1eb;font-weight:500;}
 
-    /* ── Main ── */
-    main { max-width: 1200px; margin: 0 auto; padding: 28px 40px 64px; }
+    /* Main */
+    main{max-width:1200px;margin:0 auto;padding:24px 40px 64px;}
+    .stats-row{display:flex;align-items:baseline;gap:8px;margin-bottom:18px;flex-wrap:wrap;}
+    .stats-row .total{font-family:var(--font-serif);font-size:22px;}
+    .stats-row .sub{font-size:13px;color:var(--ink3);}
+    .hint-badge{display:inline-block;background:var(--bg2);border-radius:6px;padding:2px 10px;font-size:11px;color:var(--ink3);}
 
-    .stats-row {
-      display: flex; align-items: baseline; gap: 8px; margin-bottom: 20px;
-    }
-    .stats-row .total { font-family: var(--font-serif); font-size: 22px; }
-    .stats-row .sub { font-size: 13px; color: var(--ink3); }
-    .grundschul-hinweis {
-      display: inline-block;
-      background: var(--bg2);
-      border-radius: 6px;
-      padding: 2px 10px;
-      font-size: 12px;
-      color: var(--ink3);
-      margin-left: 8px;
-    }
+    /* Cards */
+    .cards-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:16px;}
+    .card{background:#fff;border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow);transition:box-shadow .2s,transform .2s;animation:fadeUp .35s ease both;overflow:hidden;}
+    .card:hover{box-shadow:var(--shadow-lg);transform:translateY(-2px);}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
 
-    .cards-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-      gap: 18px;
-    }
+    .card-header{padding:18px 18px 12px;display:flex;flex-direction:column;gap:8px;}
+    .card-top{display:flex;align-items:flex-start;justify-content:space-between;gap:8px;}
+    .kat-badge{display:inline-block;padding:3px 9px;border-radius:10px;font-size:10px;font-weight:500;letter-spacing:.04em;white-space:nowrap;flex-shrink:0;}
+    .kat-schulstellen{background:var(--blue-soft);color:var(--blue);}
+    .kat-zfsl{background:var(--teal-soft);color:var(--teal);}
+    .kat-schulaufsicht{background:var(--gold-soft);color:var(--gold);}
+    .kat-sonstige{background:var(--red-soft);color:var(--red);}
 
-    /* ── Card ── */
-    .card {
-      background: #fff;
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      transition: box-shadow 0.2s, transform 0.2s;
-      animation: fadeUp 0.35s ease both;
-      overflow: hidden;
-    }
-    .card:hover { box-shadow: var(--shadow-lg); transform: translateY(-2px); }
-    @keyframes fadeUp {
-      from { opacity:0; transform: translateY(10px); }
-      to   { opacity:1; transform: translateY(0); }
-    }
+    /* NEU-Badge */
+    .neu-badge{display:inline-block;background:#e8f7ed;color:#1a7a42;border-radius:10px;padding:2px 8px;font-size:10px;font-weight:500;margin-left:4px;vertical-align:middle;}
 
-    /* Card Header (immer sichtbar) */
-    .card-header {
-      padding: 20px 20px 14px;
-      display: flex; flex-direction: column; gap: 8px;
-    }
-    .card-top {
-      display: flex; align-items: flex-start;
-      justify-content: space-between; gap: 8px;
-    }
-    .kat-badge {
-      display: inline-block; padding: 3px 10px;
-      border-radius: 10px; font-size: 11px; font-weight: 500;
-      letter-spacing: 0.04em; white-space: nowrap; flex-shrink: 0;
-    }
-    .kat-schulstellen  { background: var(--blue-soft);  color: var(--blue); }
-    .kat-zfsl          { background: var(--teal-soft);  color: var(--teal); }
-    .kat-schulaufsicht { background: var(--gold-soft);  color: var(--gold); }
-    .kat-sonstige      { background: var(--red-soft);   color: var(--red); }
+    .card-title{font-family:var(--font-serif);font-size:16px;font-weight:400;line-height:1.3;color:var(--ink);}
 
-    .card-title {
-      font-family: var(--font-serif);
-      font-size: 17px; font-weight: 400;
-      line-height: 1.3; color: var(--ink);
-    }
+    /* Beschreibung */
+    .card-beschreibung{font-size:12px;color:var(--ink3);line-height:1.45;white-space:pre-line;}
 
-    /* Ort + Schule */
-    .card-location {
-      display: flex; flex-direction: column; gap: 1px;
-    }
-    .card-ort {
-      display: flex; align-items: center; gap: 6px;
-      font-size: 13px; font-weight: 500; color: var(--ink2);
-    }
-    .card-ort svg { color: var(--ink3); flex-shrink: 0; }
-    .card-schulname {
-      font-size: 12px; color: var(--ink3);
-      padding-left: 18px; line-height: 1.35;
-    }
+    .card-location{display:flex;flex-direction:column;gap:2px;}
+    .card-ort{display:flex;align-items:center;gap:6px;font-size:13px;font-weight:500;color:var(--ink2);}
+    .card-ort svg{color:var(--ink3);flex-shrink:0;}
+    .card-schulname{font-size:11px;color:var(--ink3);padding-left:18px;line-height:1.35;}
 
-    /* Frist-Zeile */
-    .card-frist-row {
-      display: flex; align-items: center;
-      justify-content: space-between;
-      padding: 10px 20px 14px;
-      border-top: 1px solid var(--border);
-    }
-    .frist-label { font-size: 11px; color: var(--ink3); text-transform: uppercase; letter-spacing: 0.05em; }
-    .frist-date { font-size: 13px; font-weight: 500; color: var(--ink); }
-    .frist-date.bald { color: var(--red); }
+    .card-frist-row{display:flex;align-items:center;justify-content:space-between;padding:9px 18px 12px;border-top:1px solid var(--border);}
+    .frist-label{font-size:10px;color:var(--ink3);text-transform:uppercase;letter-spacing:.05em;}
+    .frist-date{font-size:13px;font-weight:500;color:var(--ink);}
+    .frist-date.bald{color:var(--red);}
 
-    /* Ausklapp-Bereich */
-    .card-details {
-      border-top: 1px solid var(--border);
-      overflow: hidden;
-      max-height: 0;
-      transition: max-height 0.3s ease, padding 0.2s;
-    }
-    .card-details.open { max-height: 300px; }
-    .details-inner {
-      padding: 14px 20px 16px;
-      display: flex; flex-direction: column; gap: 8px;
-    }
-    .detail-row {
-      display: flex; align-items: flex-start; gap: 8px;
-      font-size: 13px; color: var(--ink2);
-    }
-    .detail-label {
-      font-size: 11px; font-weight: 500; text-transform: uppercase;
-      letter-spacing: 0.06em; color: var(--ink3);
-      white-space: nowrap; padding-top: 1px; min-width: 90px;
-    }
-    .detail-value { color: var(--ink); }
+    .card-toggle{width:100%;background:none;border:none;border-top:1px solid var(--border);padding:8px 18px;display:flex;align-items:center;justify-content:space-between;font-family:var(--font-sans);font-size:11px;color:var(--ink3);cursor:pointer;transition:background .15s;text-align:left;}
+    .card-toggle:hover{background:var(--bg);color:var(--ink2);}
+    .card-toggle svg{transition:transform .25s;flex-shrink:0;}
+    .card-toggle.open svg{transform:rotate(180deg);}
 
-    /* Toggle-Button */
-    .card-toggle {
-      width: 100%;
-      background: none; border: none;
-      border-top: 1px solid var(--border);
-      padding: 9px 20px;
-      display: flex; align-items: center; justify-content: space-between;
-      font-family: var(--font-sans); font-size: 12px;
-      color: var(--ink3); cursor: pointer;
-      transition: background 0.15s; text-align: left;
-    }
-    .card-toggle:hover { background: var(--bg); color: var(--ink2); }
-    .card-toggle svg {
-      transition: transform 0.25s;
-      flex-shrink: 0;
-    }
-    .card-toggle.open svg { transform: rotate(180deg); }
+    .card-details{overflow:hidden;max-height:0;transition:max-height .3s ease;}
+    .card-details.open{max-height:300px;}
+    .details-inner{padding:12px 18px 14px;display:flex;flex-direction:column;gap:7px;}
+    .detail-row{display:flex;align-items:flex-start;gap:8px;font-size:12px;color:var(--ink2);}
+    .detail-label{font-size:10px;font-weight:500;text-transform:uppercase;letter-spacing:.06em;color:var(--ink3);white-space:nowrap;padding-top:1px;min-width:82px;}
+    .detail-value{color:var(--ink);}
+    .card-link{display:inline-flex;align-items:center;gap:4px;font-size:11px;font-weight:500;color:var(--blue);text-decoration:none;}
+    .card-link:hover{text-decoration:underline;}
 
-    /* Link */
-    .card-link {
-      display: inline-flex; align-items: center; gap: 4px;
-      font-size: 12px; font-weight: 500;
-      color: var(--blue); text-decoration: none;
-    }
-    .card-link:hover { text-decoration: underline; }
+    /* Karte */
+    #map-view{display:none;}
+    #map-view.active{display:block;}
+    #list-view{display:block;}
+    #list-view.hidden{display:none;}
 
-    /* Leer-Zustand */
-    .empty-state {
-      grid-column: 1 / -1; text-align: center;
-      padding: 80px 40px; color: var(--ink3);
-    }
-    .empty-state .icon { font-size: 40px; margin-bottom: 16px; }
-    .empty-state h3 {
-      font-family: var(--font-serif); font-size: 22px;
-      font-weight: 400; color: var(--ink2); margin-bottom: 8px;
-    }
+    #map{height:calc(100vh - 200px);min-height:500px;border-radius:var(--radius);border:1px solid var(--border);margin-bottom:16px;}
+
+    /* Leaflet Popup */
+    .popup-titel{font-family:var(--font-serif);font-size:15px;font-weight:400;margin-bottom:4px;}
+    .popup-ort{font-size:12px;color:#555;margin-bottom:2px;}
+    .popup-frist{font-size:12px;color:#333;font-weight:500;}
+    .popup-link{display:inline-block;margin-top:6px;font-size:11px;color:var(--blue);}
+
+    /* Leer */
+    .empty-state{grid-column:1/-1;text-align:center;padding:80px 40px;color:var(--ink3);}
+    .empty-state .icon{font-size:40px;margin-bottom:16px;}
+    .empty-state h3{font-family:var(--font-serif);font-size:22px;font-weight:400;color:var(--ink2);margin-bottom:8px;}
 
     /* Loader */
-    #loader {
-      display: flex; align-items: center; justify-content: center;
-      gap: 10px; padding: 80px; color: var(--ink3); font-size: 14px;
-    }
-    .spinner {
-      width: 20px; height: 20px;
-      border: 2px solid var(--border); border-top-color: var(--ink);
-      border-radius: 50%; animation: spin 0.7s linear infinite;
-    }
-    @keyframes spin { to { transform: rotate(360deg); } }
+    #loader{display:flex;align-items:center;justify-content:center;gap:10px;padding:80px;color:var(--ink3);font-size:14px;}
+    .spinner{width:20px;height:20px;border:2px solid var(--border);border-top-color:var(--ink);border-radius:50%;animation:spin .7s linear infinite;}
+    @keyframes spin{to{transform:rotate(360deg)}}
 
-    /* Footer */
-    footer {
-      border-top: 1px solid var(--border);
-      padding: 24px 40px; text-align: center;
-      font-size: 12px; color: var(--ink3);
-    }
-    footer a { color: var(--ink2); }
+    footer{border-top:1px solid var(--border);padding:24px 40px;text-align:center;font-size:12px;color:var(--ink3);}
+    footer a{color:var(--ink2);}
 
-    @media (max-width: 640px) {
-      header { padding: 28px 16px 20px; }
-      .filter-bar { padding: 10px 16px; }
-      main { padding: 20px 16px 48px; }
-      .cards-grid { grid-template-columns: 1fr; }
-      .search-wrap { width: 100%; }
-      #search-input { width: 100%; }
+    @media(max-width:640px){
+      header{padding:24px 16px 18px;}
+      .filter-bar{padding:8px 16px;}
+      main{padding:16px 16px 48px;}
+      .cards-grid{grid-template-columns:1fr;}
+      .search-wrap{width:100%;}
+      #search-input{width:100%;}
     }
   </style>
 </head>
@@ -337,10 +162,7 @@
   <div class="header-inner">
     <div class="header-label">Schulministerium NRW · STELLA</div>
     <h1>Stellen im Schuldienst<br><em>Dortmund &amp; NRW</em></h1>
-    <p class="header-sub">
-      Schulstellen &amp; ZfsL im Umkreis 50 km um Dortmund ·
-      Schulaufsicht &amp; Sonstige in ganz NRW · Ohne Grundschulstellen
-    </p>
+    <p class="header-sub">Schulstellen &amp; ZfsL im 25-km-Radius · Schulaufsicht &amp; Sonstige in ganz NRW · Ohne Grundschulstellen</p>
     <div class="update-badge">
       <span class="dot"></span>
       <span id="update-time">Lade Daten…</span>
@@ -351,7 +173,6 @@
 <div class="filter-bar">
   <div class="filter-inner">
     <span class="filter-label">Filter</span>
-
     <button class="chip kat-schulstellen active" data-kat="schulstellen" onclick="toggleKat(this)">
       Schulstellen <span class="count" id="cnt-schulstellen">–</span>
     </button>
@@ -365,16 +186,35 @@
       Sonstige <span class="count" id="cnt-sonstige">–</span>
     </button>
 
-    <span class="filter-label" style="margin-left:8px">Sortierung</span>
+    <span class="filter-label" style="margin-left:6px">Sortierung</span>
     <select class="sort-select" id="sort-select" onchange="render()">
+      <option value="first_seen">Neu entdeckt</option>
       <option value="frist">Bewerbungsfrist</option>
       <option value="besoldung">Besoldung</option>
       <option value="ort">Ort</option>
       <option value="titel">Titel</option>
     </select>
 
+    <div class="view-tabs">
+      <button class="view-tab active" id="tab-list" onclick="setView('list')">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/>
+          <line x1="8" y1="18" x2="21" y2="18"/><circle cx="3" cy="6" r="1" fill="currentColor"/>
+          <circle cx="3" cy="12" r="1" fill="currentColor"/><circle cx="3" cy="18" r="1" fill="currentColor"/>
+        </svg>
+        Liste
+      </button>
+      <button class="view-tab" id="tab-map" onclick="setView('map')">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21"/>
+          <line x1="9" y1="3" x2="9" y2="18"/><line x1="15" y1="6" x2="15" y2="21"/>
+        </svg>
+        Karte
+      </button>
+    </div>
+
     <div class="search-wrap">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
         <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
       </svg>
       <input id="search-input" type="search" placeholder="Suchen…" oninput="render()" />
@@ -386,244 +226,316 @@
   <div class="stats-row">
     <span class="total" id="visible-count">–</span>
     <span class="sub">Stellen angezeigt</span>
-    <span class="grundschul-hinweis">Grundschulstellen ausgeblendet</span>
+    <span class="hint-badge">Grundschulstellen ausgeblendet</span>
+    <span class="hint-badge" id="neue-count" style="display:none;background:#e8f7ed;color:#1a7a42;"></span>
   </div>
+
   <div id="loader"><div class="spinner"></div> Stellendaten werden geladen…</div>
-  <div class="cards-grid" id="cards"></div>
+
+  <!-- Listenansicht -->
+  <div id="list-view">
+    <div class="cards-grid" id="cards"></div>
+  </div>
+
+  <!-- Kartenansicht -->
+  <div id="map-view">
+    <div id="map"></div>
+    <p style="font-size:12px;color:var(--ink3);text-align:center;">
+      Nur Schulstellen &amp; ZfsL werden auf der Karte angezeigt (haben Schulortdaten).
+    </p>
+  </div>
 </main>
 
 <footer>
   Daten von <a href="https://www.stellenausschreibungen.nrw.de" target="_blank" rel="noopener">STELLA NRW</a> ·
-  Automatisch täglich aktualisiert · Kein offizielles Portal des Schulministeriums NRW
+  Täglich automatisch aktualisiert via GitHub Actions · Kein offizielles Portal
 </footer>
 
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
 const JSON_URL = "stellen.json";
-
 const KAT_LABEL = {
-  schulstellen:  "Schulstellen",
-  zfsl:          "ZfsL / Fachleiter",
-  schulaufsicht: "Schulaufsicht",
-  sonstige:      "Sonstige Tätigkeiten",
+  schulstellen:"Schulstellen", zfsl:"ZfsL / Fachleiter",
+  schulaufsicht:"Schulaufsicht", sonstige:"Sonstige Tätigkeiten"
+};
+const KAT_FARBE = {
+  schulstellen:"#1a4fa0", zfsl:"#0d7a6e",
+  schulaufsicht:"#b07d2a", sonstige:"#c0392b"
 };
 
-// Wörter die zum Ausblenden führen (Grundschulstellen)
-const GRUNDSCHUL_FILTER = [
-  "grundschule", "grundschul", "gem. grundsch", "kath. grundsch",
-  "ev. grundsch", "städt. grundsch", "gemeinschaftsgrundschule",
-  "konrektor/-in (w/m/d)", // fast ausschließlich Grundschule — aber nicht pauschal!
-];
-
-// Nur diese Titel-Wörter führen zum Ausblenden wenn "Grund" im Schulnamen steht
-function istGrundschulstelle(s) {
-  const check = [
-    (s.titel || ""),
-    (s.schulname || ""),
-    (s.rohdaten || ""),
-  ].join(" ").toLowerCase();
-
-  return (
-    check.includes("grundschule") ||
-    check.includes("grundschul")  ||
-    check.includes("gemeinschaftsgrundsch") ||
-    check.includes("primarstufe")
-  );
+// Grundschul-Filter
+function istGrundschule(s){
+  const txt=[s.titel||"",s.schulname||"",s.beschreibung||""].join(" ").toLowerCase();
+  return txt.includes("grundschule")||txt.includes("grundschul")||
+         txt.includes("gemeinschaftsgrundsch")||txt.includes("primarstufe");
 }
 
 let alleStellen = [];
 let aktivKats   = new Set(["schulstellen","zfsl","schulaufsicht","sonstige"]);
+let aktuelleAnsicht = "list";
+let karte = null;
+let karteMarkers = [];
+let heute = new Date().toISOString().slice(0,10);
 
-async function ladeDaten() {
+async function ladeDaten(){
   try {
-    const res = await fetch(JSON_URL + "?_=" + Date.now());
-    if (!res.ok) throw new Error("HTTP " + res.status);
+    const res = await fetch(JSON_URL+"?_="+Date.now());
+    if(!res.ok) throw new Error("HTTP "+res.status);
     const daten = await res.json();
-
-    // Grundschulstellen rausfiltern
-    alleStellen = (daten.stellen || []).filter(s => !istGrundschulstelle(s));
-
+    alleStellen = (daten.stellen||[]).filter(s=>!istGrundschule(s));
     document.getElementById("update-time").textContent =
-      "Aktualisiert: " + (daten.aktualisiert_lesbar || "–");
-
-    // Zähler (nach Filter)
-    for (const kat of Object.keys(KAT_LABEL)) {
-      const n = alleStellen.filter(s => s.kategorie === kat).length;
-      const el = document.getElementById("cnt-" + kat);
-      if (el) el.textContent = n;
+      "Aktualisiert: "+(daten.aktualisiert_lesbar||"–");
+    for(const kat of Object.keys(KAT_LABEL)){
+      const n = alleStellen.filter(s=>s.kategorie===kat).length;
+      const el = document.getElementById("cnt-"+kat);
+      if(el) el.textContent = n;
     }
-
-    document.getElementById("loader").style.display = "none";
+    document.getElementById("loader").style.display="none";
     render();
-  } catch (e) {
-    document.getElementById("loader").innerHTML =
-      `<span>⚠ Daten konnten nicht geladen werden.</span>`;
+  } catch(e) {
+    document.getElementById("loader").innerHTML="<span>⚠ Daten konnten nicht geladen werden.</span>";
     console.error(e);
   }
 }
 
-function toggleKat(btn) {
-  const k = btn.dataset.kat;
-  if (aktivKats.has(k)) {
-    if (aktivKats.size === 1) return;
-    aktivKats.delete(k);
-    btn.classList.remove("active");
+function toggleKat(btn){
+  const k=btn.dataset.kat;
+  if(aktivKats.has(k)){
+    if(aktivKats.size===1) return;
+    aktivKats.delete(k); btn.classList.remove("active");
   } else {
-    aktivKats.add(k);
-    btn.classList.add("active");
+    aktivKats.add(k); btn.classList.add("active");
   }
   render();
 }
 
-function fristBald(fristStr) {
-  if (!fristStr) return false;
-  const m = fristStr.match(/(\d{2})\.(\d{2})\.(\d{4})/);
-  if (!m) return false;
-  const d = new Date(m[3], m[2]-1, m[1]);
-  return (d - Date.now()) / 86400000 <= 14 && d >= Date.now();
+function setView(v){
+  aktuelleAnsicht=v;
+  document.getElementById("tab-list").classList.toggle("active",v==="list");
+  document.getElementById("tab-map").classList.toggle("active",v==="map");
+  document.getElementById("list-view").classList.toggle("hidden",v==="map");
+  document.getElementById("map-view").classList.toggle("active",v==="map");
+  if(v==="map") renderKarte();
 }
 
-function fristZuDatum(str) {
-  if (!str) return new Date(9999,0,1);
-  const m = str.match(/(\d{2})\.(\d{2})\.(\d{4})/);
-  return m ? new Date(m[3], m[2]-1, m[1]) : new Date(9999,0,1);
+function fristBald(str){
+  if(!str) return false;
+  const m=str.match(/(\d{2})\.(\d{2})\.(\d{4})/);
+  if(!m) return false;
+  const d=new Date(m[3],m[2]-1,m[1]);
+  return (d-Date.now())/86400000<=14 && d>=Date.now();
+}
+function fristZuDatum(str){
+  if(!str) return new Date(9999,0,1);
+  const m=str.match(/(\d{2})\.(\d{2})\.(\d{4})/);
+  return m?new Date(m[3],m[2]-1,m[1]):new Date(9999,0,1);
+}
+function besoldungZuZahl(str){
+  if(!str) return 99;
+  const m=str.match(/A\s*(\d+)/i);
+  return m?parseInt(m[1]):99;
+}
+function firstSeenZuDatum(str){
+  return str?new Date(str):new Date(9999,0,1);
+}
+function istNeu(s){
+  return s.first_seen && s.first_seen >= neue_grenze();
+}
+function neue_grenze(){
+  const d=new Date(); d.setDate(d.getDate()-7);
+  return d.toISOString().slice(0,10);
 }
 
-// Besoldung sortierbar machen: A13 < A14 < A15 < A16
-function besoldungZuZahl(str) {
-  if (!str) return 99;
-  const m = str.match(/A\s*(\d+)/i);
-  return m ? parseInt(m[1]) : 99;
-}
-
-function sortiere(liste) {
-  const s = document.getElementById("sort-select").value;
-  return [...liste].sort((a, b) => {
-    if (s === "frist")     return fristZuDatum(a.frist) - fristZuDatum(b.frist);
-    if (s === "besoldung") return besoldungZuZahl(b.besoldung) - besoldungZuZahl(a.besoldung);
-    if (s === "ort")       return (a.ort||"").localeCompare(b.ort||"", "de");
-    if (s === "titel")     return (a.titel||"").localeCompare(b.titel||"", "de");
+function sortiere(liste){
+  const s=document.getElementById("sort-select").value;
+  return [...liste].sort((a,b)=>{
+    if(s==="first_seen") return firstSeenZuDatum(b.first_seen)-firstSeenZuDatum(a.first_seen);
+    if(s==="frist")      return fristZuDatum(a.frist)-fristZuDatum(b.frist);
+    if(s==="besoldung")  return besoldungZuZahl(b.besoldung)-besoldungZuZahl(a.besoldung);
+    if(s==="ort")        return (a.ort||"").localeCompare(b.ort||"","de");
+    if(s==="titel")      return (a.titel||"").localeCompare(b.titel||"","de");
     return 0;
   });
 }
 
-function escHTML(s) {
-  return String(s||"")
-    .replace(/&/g,"&amp;").replace(/</g,"&lt;")
+function esc(s){
+  return String(s||"").replace(/&/g,"&amp;").replace(/</g,"&lt;")
     .replace(/>/g,"&gt;").replace(/"/g,"&quot;");
 }
 
-function karteHTML(s, idx) {
-  const kat   = s.kategorie || "sonstige";
-  const titel = s.titel || "Stelle";
-  const ort   = s.ort || "";
-  const schulname = s.schulname || "";
-  const besoldung = s.besoldung || "";
-  const besetzung = s.besetzung || "";
-  const frist = s.frist || "";
-  const url   = s.url || "https://www.stellenausschreibungen.nrw.de";
-  const bald  = fristBald(frist);
-  const delay = Math.min(idx * 35, 500);
-  const hatUrl = url && url !== "https://www.stellenausschreibungen.nrw.de";
-  const uid = "card-" + idx;
+function karteHTML(s,idx){
+  const kat=s.kategorie||"sonstige";
+  const uid="c"+idx;
+  const bald=fristBald(s.frist);
+  const neu=istNeu(s);
+  const delay=Math.min(idx*30,400);
+  const hatUrl=s.url&&!s.url.includes("stellenausschreibungen.nrw.de/\n");
 
-  const ortHTML = ort ? `
+  const beschrHTML = s.beschreibung
+    ? `<div class="card-beschreibung">${esc(s.beschreibung)}</div>` : "";
+
+  const ortHTML = s.ort ? `
     <div class="card-location">
       <div class="card-ort">
         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <path d="M20 10c0 6-8 13-8 13s-8-7-8-13a8 8 0 0 1 16 0Z"/>
           <circle cx="12" cy="10" r="3"/>
         </svg>
-        ${escHTML(ort)}
+        ${esc(s.ort)}
       </div>
-      ${schulname ? `<div class="card-schulname">${escHTML(schulname)}</div>` : ""}
+      ${s.schulname?`<div class="card-schulname">${esc(s.schulname)}</div>`:""}
     </div>` : "";
 
-  const fristHTML = frist ? `
+  const fristHTML = s.frist ? `
     <div class="card-frist-row">
       <span class="frist-label">Bewerbungsschluss</span>
-      <span class="frist-date ${bald ? "bald" : ""}">${escHTML(frist)}${bald ? " ⏰" : ""}</span>
+      <span class="frist-date ${bald?"bald":""}">${esc(s.frist)}${bald?" ⏰":""}</span>
     </div>` : "";
 
-  const detailsHTML = `
-    <button class="card-toggle" id="btn-${uid}" onclick="toggleDetails('${uid}')">
-      <span>Besoldung &amp; Details</span>
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <polyline points="6 9 12 15 18 9"/>
-      </svg>
-    </button>
-    <div class="card-details" id="det-${uid}">
-      <div class="details-inner">
-        ${besoldung ? `<div class="detail-row">
-          <span class="detail-label">Besoldung</span>
-          <span class="detail-value">${escHTML(besoldung)}</span>
-        </div>` : ""}
-        ${besetzung ? `<div class="detail-row">
-          <span class="detail-label">Besetzung</span>
-          <span class="detail-value">${escHTML(besetzung)}</span>
-        </div>` : ""}
-        ${hatUrl ? `<div class="detail-row">
-          <span class="detail-label">Link</span>
-          <a class="card-link" href="${escHTML(url)}" target="_blank" rel="noopener">
-            Auf STELLA ansehen
-            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
-              <polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/>
-            </svg>
-          </a>
-        </div>` : ""}
-      </div>
-    </div>`;
+  const firstSeenHTML = s.first_seen
+    ? `<div class="detail-row">
+        <span class="detail-label">Entdeckt</span>
+        <span class="detail-value">${esc(s.first_seen)}</span>
+      </div>` : "";
 
   return `
     <article class="card" style="animation-delay:${delay}ms">
       <div class="card-header">
         <div class="card-top">
-          <h2 class="card-title">${escHTML(titel)}</h2>
+          <h2 class="card-title">${esc(s.titel||"Stelle")}${neu?'<span class="neu-badge">NEU</span>':""}</h2>
           <span class="kat-badge kat-${kat}">${KAT_LABEL[kat]||kat}</span>
         </div>
+        ${beschrHTML}
         ${ortHTML}
       </div>
       ${fristHTML}
-      ${detailsHTML}
+      <button class="card-toggle" id="btn-${uid}" onclick="toggleDet('${uid}')">
+        <span>Besoldung &amp; Details</span>
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="6 9 12 15 18 9"/>
+        </svg>
+      </button>
+      <div class="card-details" id="det-${uid}">
+        <div class="details-inner">
+          ${s.besoldung?`<div class="detail-row"><span class="detail-label">Besoldung</span><span class="detail-value">${esc(s.besoldung)}</span></div>`:""}
+          ${s.besetzung?`<div class="detail-row"><span class="detail-label">Besetzung</span><span class="detail-value">${esc(s.besetzung)}</span></div>`:""}
+          ${firstSeenHTML}
+          ${s.url?`<div class="detail-row"><span class="detail-label">Link</span><a class="card-link" href="${esc(s.url)}" target="_blank" rel="noopener">Auf STELLA ansehen ↗</a></div>`:""}
+        </div>
+      </div>
     </article>`;
 }
 
-function toggleDetails(uid) {
-  const det = document.getElementById("det-" + uid);
-  const btn = document.getElementById("btn-" + uid);
-  const isOpen = det.classList.contains("open");
-  det.classList.toggle("open", !isOpen);
-  btn.classList.toggle("open", !isOpen);
+function toggleDet(uid){
+  const det=document.getElementById("det-"+uid);
+  const btn=document.getElementById("btn-"+uid);
+  const o=det.classList.contains("open");
+  det.classList.toggle("open",!o);
+  btn.classList.toggle("open",!o);
 }
 
-function render() {
-  const q = (document.getElementById("search-input").value || "").toLowerCase().trim();
-
-  let sichtbar = alleStellen.filter(s => {
-    if (!aktivKats.has(s.kategorie)) return false;
-    if (q) {
-      const hay = [s.titel, s.ort, s.schulname, s.besoldung].join(" ").toLowerCase();
-      if (!hay.includes(q)) return false;
+function gefilterteSichtbar(){
+  const q=(document.getElementById("search-input").value||"").toLowerCase().trim();
+  return alleStellen.filter(s=>{
+    if(!aktivKats.has(s.kategorie)) return false;
+    if(q){
+      const hay=[s.titel,s.ort,s.schulname,s.besoldung,s.beschreibung].join(" ").toLowerCase();
+      if(!hay.includes(q)) return false;
     }
     return true;
   });
+}
 
-  sichtbar = sortiere(sichtbar);
+function render(){
+  const sichtbar=sortiere(gefilterteSichtbar());
+  const neueAnzahl=sichtbar.filter(istNeu).length;
 
-  document.getElementById("visible-count").textContent = sichtbar.length;
-
-  const container = document.getElementById("cards");
-  if (sichtbar.length === 0) {
-    container.innerHTML = `
-      <div class="empty-state">
-        <div class="icon">🔍</div>
-        <h3>Keine Stellen gefunden</h3>
-        <p>Filter oder Suchbegriff anpassen.</p>
-      </div>`;
-    return;
+  document.getElementById("visible-count").textContent=sichtbar.length;
+  const neueEl=document.getElementById("neue-count");
+  if(neueAnzahl>0){
+    neueEl.textContent=neueAnzahl+" neu (letzte 7 Tage)";
+    neueEl.style.display="inline-block";
+  } else {
+    neueEl.style.display="none";
   }
 
-  container.innerHTML = sichtbar.map((s, i) => karteHTML(s, i)).join("");
+  const container=document.getElementById("cards");
+  if(sichtbar.length===0){
+    container.innerHTML=`<div class="empty-state"><div class="icon">🔍</div><h3>Keine Stellen gefunden</h3><p>Filter oder Suchbegriff anpassen.</p></div>`;
+    return;
+  }
+  container.innerHTML=sichtbar.map((s,i)=>karteHTML(s,i)).join("");
+
+  if(aktuelleAnsicht==="map") renderKarte();
+}
+
+// ── Karte ──────────────────────────────────────────────────────────────────
+
+function renderKarte(){
+  if(!karte){
+    karte=L.map("map").setView([51.5136,7.4653],10);
+    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",{
+      attribution:'© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+      maxZoom:18
+    }).addTo(karte);
+    // Dortmund-Marker
+    L.circle([51.5136,7.4653],{
+      color:"#1a4fa0",fillColor:"#1a4fa0",fillOpacity:.08,
+      radius:25000,weight:1.5,dashArray:"6 4"
+    }).addTo(karte);
+    L.circleMarker([51.5136,7.4653],{
+      radius:8,color:"#1a4fa0",fillColor:"#1a4fa0",fillOpacity:.9,weight:2
+    }).addTo(karte).bindTooltip("Dortmund (Mittelpunkt)",{permanent:false});
+  }
+
+  // Alte Marker entfernen
+  karteMarkers.forEach(m=>m.remove());
+  karteMarkers=[];
+
+  const sichtbar=gefilterteSichtbar().filter(s=>
+    (s.kategorie==="schulstellen"||s.kategorie==="zfsl") && s.lat && s.lon
+  );
+
+  // Orte gruppieren (mehrere Stellen am selben Ort)
+  const orte={};
+  sichtbar.forEach(s=>{
+    const key=`${s.lat},${s.lon}`;
+    if(!orte[key]) orte[key]={lat:s.lat,lon:s.lon,ort:s.ort,stellen:[]};
+    orte[key].stellen.push(s);
+  });
+
+  Object.values(orte).forEach(({lat,lon,ort,stellen})=>{
+    // Farbe: wenn mehrere Kategorien → blau, sonst Kategorie-Farbe
+    const kat=stellen.length===1?stellen[0].kategorie:"schulstellen";
+    const farbe=KAT_FARBE[kat]||"#555";
+    const radius=Math.min(6+stellen.length*1.5,14);
+
+    const marker=L.circleMarker([lat,lon],{
+      radius,color:farbe,fillColor:farbe,fillOpacity:.85,weight:2
+    }).addTo(karte);
+
+    const popupHTML=stellen.map(s=>`
+      <div style="border-bottom:1px solid #eee;padding:6px 0;margin-bottom:4px;">
+        <div class="popup-titel">${esc(s.titel)}</div>
+        ${s.schulname?`<div class="popup-ort">${esc(s.schulname)}</div>`:""}
+        ${s.frist?`<div class="popup-frist">Frist: ${esc(s.frist)}</div>`:""}
+        ${s.url?`<a class="popup-link" href="${esc(s.url)}" target="_blank">→ STELLA</a>`:""}
+      </div>`).join("");
+
+    marker.bindPopup(`
+      <div style="font-family:sans-serif;max-width:260px;">
+        <strong style="font-size:13px;">${esc(ort)}</strong>
+        <span style="font-size:11px;color:#888;margin-left:6px;">${stellen.length} Stelle(n)</span>
+        <div style="margin-top:6px;">${popupHTML}</div>
+      </div>`,{maxWidth:280}
+    );
+    karteMarkers.push(marker);
+  });
+
+  if(karteMarkers.length>0){
+    const bounds=L.featureGroup(karteMarkers).getBounds();
+    karte.fitBounds(bounds.pad(.15));
+  }
 }
 
 ladeDaten();
