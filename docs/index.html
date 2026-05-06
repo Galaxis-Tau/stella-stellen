@@ -36,6 +36,9 @@
     .header-sub{font-size:13px;color:rgba(244,241,235,0.6);max-width:540px;}
     .update-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12);border-radius:20px;padding:4px 12px;font-size:12px;color:rgba(244,241,235,0.7);margin-top:14px;}
     .update-badge .dot{width:6px;height:6px;border-radius:50%;background:#5ec98a;animation:pulse 2s infinite;}
+    .refresh-button{margin-top:16px;background:#1a4fa0;color:#fff;border:none;border-radius:999px;padding:10px 16px;font-size:12px;font-weight:600;cursor:pointer;transition:transform .18s,opacity .18s;margin-left:12px;}
+    .refresh-button:hover:not(:disabled){transform:translateY(-1px);opacity:.95;}
+    .refresh-button:disabled{opacity:.55;cursor:wait;}
     @keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
 
     /* Filter Bar */
@@ -167,6 +170,7 @@
       <span class="dot"></span>
       <span id="update-time">Lade Daten…</span>
     </div>
+    <button class="refresh-button" id="refresh-button" type="button" onclick="manuelleAktualisierung()">Jetzt aktualisieren</button>
   </div>
 </header>
 
@@ -295,6 +299,25 @@ async function ladeDaten(){
   } catch(e) {
     document.getElementById("loader").innerHTML="<span>⚠ Daten konnten nicht geladen werden.</span>";
     console.error(e);
+  }
+}
+
+function setRefreshState(active){
+  const btn = document.getElementById("refresh-button");
+  if(!btn) return;
+  btn.disabled = active;
+  btn.textContent = active ? "Aktualisiere…" : "Jetzt aktualisieren";
+}
+
+async function manuelleAktualisierung(){
+  setRefreshState(true);
+  const loader = document.getElementById("loader");
+  loader.style.display = "flex";
+  loader.innerHTML = '<div class="spinner"></div>Stellendaten werden aktualisiert…';
+  try {
+    await ladeDaten();
+  } finally {
+    setRefreshState(false);
   }
 }
 
