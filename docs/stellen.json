@@ -1,78 +1,8 @@
 {
-  "aktualisiert": "2026-06-29T10:29:34.411173",
-  "aktualisiert_lesbar": "29.06.2026 um 10:29 Uhr",
-  "gesamt": 132,
+  "aktualisiert": "2026-06-30T09:00:43.059326",
+  "aktualisiert_lesbar": "30.06.2026 um 09:00 Uhr",
+  "gesamt": 94,
   "stellen": [
-    {
-      "titel": "Konrektor/-in (w/m/d)",
-      "beschreibung": "Konrektor/in einer Grundschule",
-      "ort": "Dortmund",
-      "schulname": "Nordmarktschule Städt. Gem. Grundschule - Primarstufe -",
-      "besoldung": "A 13 Fn 4 LBesO",
-      "besetzung": "nächstmöglich -  vorbehaltlich der haushaltsrechtlichen Verfügbarkeit",
-      "frist": "29.06.2026",
-      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=369.46228530681014&index=0",
-      "kategorie": "schulstellen",
-      "lat": 51.5142273,
-      "lon": 7.4652789,
-      "first_seen": "2026-06-29"
-    },
-    {
-      "titel": "Konrektor/-in (w/m/d)",
-      "beschreibung": "Konrektor/in einer Grundschule",
-      "ort": "Dortmund",
-      "schulname": "Liborischule Städt. Gem. Grundschule Körne - Primarstufe -",
-      "besoldung": "A 13 Fn 4 LBesO",
-      "besetzung": "nächstmöglich -  vorbehaltlich der haushaltsrechtlichen Verfügbarkeit",
-      "frist": "29.06.2026",
-      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=369.46228530681014&index=1",
-      "kategorie": "schulstellen",
-      "lat": 51.5142273,
-      "lon": 7.4652789,
-      "first_seen": "2026-06-29"
-    },
-    {
-      "titel": "Konrektor/-in (w/m/d)",
-      "beschreibung": "Konrektor/-in einer Grundschule",
-      "ort": "Bochum",
-      "schulname": "Schule an der Hordeler Heide",
-      "besoldung": "A 13 Fn 4 LBesO / EG 13 TV-L plus Zulage nach",
-      "besetzung": "nächstmöglich - vorbehaltlich der haushaltsrechtlichen Verfügbarkeit",
-      "frist": "29.06.2026",
-      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=369.46228530681014&index=2",
-      "kategorie": "schulstellen",
-      "lat": 51.4818111,
-      "lon": 7.2196635,
-      "first_seen": "2026-06-29"
-    },
-    {
-      "titel": "Konrektor/-in (w/m/d)",
-      "beschreibung": "Konrektor/-in (m/w/d) einer Grundschule",
-      "ort": "Bochum",
-      "schulname": "Dietrich-Bonhoeffer-Schule Städt. Gem. Grundschule",
-      "besoldung": "A 13 Fn 4 LBesO / EG 13 TV-L plus Zulage nach",
-      "besetzung": "nächstmöglich - vorbehaltlich der",
-      "frist": "29.06.2026",
-      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=369.46228530681014&index=3",
-      "kategorie": "schulstellen",
-      "lat": 51.4818111,
-      "lon": 7.2196635,
-      "first_seen": "2026-06-29"
-    },
-    {
-      "titel": "Konrektor/-in (w/m/d)",
-      "beschreibung": "Konrektor/-in (m/w/d) einer Grundschule",
-      "ort": "Dortmund",
-      "schulname": "Lessingschule Städt. Gem. Grundschule - Primarstufe -",
-      "besoldung": "A 13 Fn 4 LBesO / EG 13 TV-L plus Zulage nach",
-      "besetzung": "nächstmöglich - vorbehaltlich der",
-      "frist": "29.06.2026",
-      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=369.46228530681014&index=4",
-      "kategorie": "schulstellen",
-      "lat": 51.5142273,
-      "lon": 7.4652789,
-      "first_seen": "2026-06-29"
-    },
     {
       "titel": "Konrektor/-in (w/m/d)",
       "beschreibung": "Konrektor/in ? als die/der ständige Vertreter/in der/des Leiters/in einer Hauptschule",
@@ -85,7 +15,7 @@
       "kategorie": "schulstellen",
       "lat": 51.5142273,
       "lon": 7.4652789,
-      "first_seen": "2026-06-29"
+      "first_seen": "2026-06-30"
     },
     {
       "titel": "Konrektor/-in (w/m/d)",
@@ -95,11 +25,11 @@
       "besoldung": "A 13 Fn 4 LBesO / EG 13 TV-L plus Zulage nach",
       "besetzung": "nächstmöglich - vorbehaltlich der haushaltsrechtlichen Verfügbarkeit",
       "frist": "30.06.2026",
-      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=369.46228530681014&index=6",
+      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=856.9401355224495&index=1",
       "kategorie": "schulstellen",
       "lat": 51.4818111,
       "lon": 7.2196635,
-      "first_seen": "2026-06-29"
+      "first_seen": "2026-06-30"
     },
     {
       "titel": "Rektor/-in (w/m/d)",
@@ -109,11 +39,11 @@
       "besoldung": "A 15 LBesO",
       "besetzung": "nächstmöglich - vorbehaltlich der haushaltsrechtlichen Verfügbarkeit",
       "frist": "07.07.2026",
-      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=369.46228530681014&index=7",
+      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=856.9401355224495&index=2",
       "kategorie": "schulstellen",
       "lat": 51.5142273,
       "lon": 7.4652789,
-      "first_seen": "2026-06-29"
+      "first_seen": "2026-06-30"
     },
     {
       "titel": "Rektor/-in (w/m/d)",
@@ -123,11 +53,11 @@
       "besoldung": "A 14 LBesO",
       "besetzung": "nächstmöglich - vorbehaltlich der haushaltsrechtlichen Verfügbarkeit",
       "frist": "13.07.2026",
-      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=369.46228530681014&index=8",
+      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=856.9401355224495&index=3",
       "kategorie": "schulstellen",
       "lat": 51.5142273,
       "lon": 7.4652789,
-      "first_seen": "2026-06-29"
+      "first_seen": "2026-06-30"
     },
     {
       "titel": "Konrektor/-in (w/m/d)",
@@ -141,7 +71,7 @@
       "kategorie": "schulstellen",
       "lat": 51.3207417,
       "lon": 7.3404792,
-      "first_seen": "2026-06-29"
+      "first_seen": "2026-06-30"
     },
     {
       "titel": "Zweite/-r Konrektor/-in (w/m/d)",
@@ -155,7 +85,7 @@
       "kategorie": "schulstellen",
       "lat": 51.3746778,
       "lon": 7.6999713,
-      "first_seen": "2026-06-29"
+      "first_seen": "2026-06-30"
     },
     {
       "titel": "Oberstudiendirektor/-in (w/m/d)",
@@ -165,11 +95,11 @@
       "besoldung": "A 16 LBesO NRW",
       "besetzung": "01.11.2026 - vorbehaltlich der haushaltsrechtlichen Verfügbarkeit",
       "frist": "20.07.2026",
-      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=369.46228530681014&index=11",
+      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=856.9401355224495&index=6",
       "kategorie": "schulstellen",
       "lat": 51.5348835,
       "lon": 7.689014,
-      "first_seen": "2026-06-29"
+      "first_seen": "2026-06-30"
     },
     {
       "titel": "Konrektor/-in (w/m/d)",
@@ -179,11 +109,11 @@
       "besoldung": "A 13 FN 4 LBesG",
       "besetzung": "sofort",
       "frist": "22.07.2026",
-      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=369.46228530681014&index=12",
+      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=856.9401355224495&index=7",
       "kategorie": "schulstellen",
       "lat": 51.651468,
       "lon": 7.3385906,
-      "first_seen": "2026-06-29"
+      "first_seen": "2026-06-30"
     },
     {
       "titel": "Direktor/-in (w/m/d)",
@@ -197,7 +127,7 @@
       "kategorie": "schulstellen",
       "lat": 51.4818111,
       "lon": 7.2196635,
-      "first_seen": "2026-06-29"
+      "first_seen": "2026-06-30"
     },
     {
       "titel": "Konrektor/-in (w/m/d)",
@@ -207,11 +137,11 @@
       "besoldung": "A 13 Fn 4 LBesO / EG 13 TV-L plus Zulage nach",
       "besetzung": "nächstmöglich - vorbehaltlich der",
       "frist": "27.07.2026",
-      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=369.46228530681014&index=14",
+      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=856.9401355224495&index=9",
       "kategorie": "schulstellen",
       "lat": 51.4818111,
       "lon": 7.2196635,
-      "first_seen": "2026-06-29"
+      "first_seen": "2026-06-30"
     },
     {
       "titel": "Rektor/-in (w/m/d)",
@@ -221,11 +151,11 @@
       "besoldung": "A 15 LBesO",
       "besetzung": "01.08.2026 - vorbehaltlich der haushaltsrechtlichen Verfügbarkeit",
       "frist": "03.08.2026",
-      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=369.46228530681014&index=15",
+      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=856.9401355224495&index=10",
       "kategorie": "schulstellen",
       "lat": 51.4818111,
       "lon": 7.2196635,
-      "first_seen": "2026-06-29"
+      "first_seen": "2026-06-30"
     },
     {
       "titel": "Konrektor/-in (w/m/d)",
@@ -235,11 +165,11 @@
       "besoldung": "A 13 Fn 4 LBesO",
       "besetzung": "nächstmöglich -  vorbehaltlich der haushaltsrechtlichen Verfügbarkeit",
       "frist": "03.08.2026",
-      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=369.46228530681014&index=16",
+      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=856.9401355224495&index=11",
       "kategorie": "schulstellen",
       "lat": 51.5142273,
       "lon": 7.4652789,
-      "first_seen": "2026-06-29"
+      "first_seen": "2026-06-30"
     },
     {
       "titel": "Rektor/-in (w/m/d)",
@@ -249,11 +179,11 @@
       "besoldung": "A 14 LBesO",
       "besetzung": "01.08.2026 - vorbehaltlich der haushaltsrechtlichen Verfügbarkeit",
       "frist": "07.08.2026",
-      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=369.46228530681014&index=17",
+      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=856.9401355224495&index=12",
       "kategorie": "schulstellen",
       "lat": 51.6142482,
       "lon": 7.5228088,
-      "first_seen": "2026-06-29"
+      "first_seen": "2026-06-30"
     },
     {
       "titel": "Konrektor/-in (w/m/d)",
@@ -263,11 +193,11 @@
       "besoldung": "A 13 Fn 4 LBesO / EG 13 TV-L plus Zulage nach",
       "besetzung": "nächstmöglich - vorbehaltlich der",
       "frist": "07.08.2026",
-      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=369.46228530681014&index=18",
+      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=856.9401355224495&index=13",
       "kategorie": "schulstellen",
       "lat": 51.5918019,
       "lon": 7.6616804,
-      "first_seen": "2026-06-29"
+      "first_seen": "2026-06-30"
     },
     {
       "titel": "Konrektor/-in (w/m/d)",
@@ -277,11 +207,11 @@
       "besoldung": "A 13 Fn 4 LBesO / EG 13 TV-L plus Zulage nach",
       "besetzung": "frühestens ab 01.08.2026 - vorbehaltlich der",
       "frist": "07.08.2026",
-      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=369.46228530681014&index=19",
+      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=856.9401355224495&index=14",
       "kategorie": "schulstellen",
       "lat": 51.66268,
       "lon": 7.6355052,
-      "first_seen": "2026-06-29"
+      "first_seen": "2026-06-30"
     },
     {
       "titel": "Rektor/-in (w/m/d)",
@@ -291,11 +221,11 @@
       "besoldung": "A 14 LBesO",
       "besetzung": "01.08.2026 - vorbehaltlich der haushaltsrechtlichen Verfügbarkeit",
       "frist": "07.08.2026",
-      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=369.46228530681014&index=20",
+      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=856.9401355224495&index=15",
       "kategorie": "schulstellen",
       "lat": 51.471343,
       "lon": 7.7617558,
-      "first_seen": "2026-06-29"
+      "first_seen": "2026-06-30"
     },
     {
       "titel": "Konrektor/-in (w/m/d)",
@@ -305,11 +235,11 @@
       "besoldung": "A 13 Fn 4 LBesO / EG 13 TV-L plus Zulage nach LBesG analog",
       "besetzung": "nächstmöglich - vorbehaltlich der",
       "frist": "07.08.2026",
-      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=369.46228530681014&index=21",
+      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=856.9401355224495&index=16",
       "kategorie": "schulstellen",
       "lat": 51.5007037,
       "lon": 7.6186433,
-      "first_seen": "2026-06-29"
+      "first_seen": "2026-06-30"
     },
     {
       "titel": "Konrektor/-in (w/m/d)",
@@ -319,11 +249,11 @@
       "besoldung": "A 13 Fn 4 LBesO / EG 13 TV-L plus Zulage nach LBesG analog",
       "besetzung": "nächstmöglich - vorbehaltlich der",
       "frist": "07.08.2026",
-      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=369.46228530681014&index=22",
+      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=856.9401355224495&index=17",
       "kategorie": "schulstellen",
       "lat": 51.5348835,
       "lon": 7.689014,
-      "first_seen": "2026-06-29"
+      "first_seen": "2026-06-30"
     },
     {
       "titel": "Rektor/-in (w/m/d)",
@@ -333,11 +263,11 @@
       "besoldung": "A 14 LBesO",
       "besetzung": "nächstmöglich - vorbehaltlich der haushaltsrechtlichen Verfügbarkeit",
       "frist": "10.08.2026",
-      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=369.46228530681014&index=23",
+      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=856.9401355224495&index=18",
       "kategorie": "schulstellen",
       "lat": 51.4818111,
       "lon": 7.2196635,
-      "first_seen": "2026-06-29"
+      "first_seen": "2026-06-30"
     },
     {
       "titel": "Rektor/-in (w/m/d)",
@@ -347,11 +277,11 @@
       "besoldung": "A 14 LBesO",
       "besetzung": "01.08.2026 - vorbehaltlich der haushaltsrechtlichen Verfügbarkeit",
       "frist": "10.08.2026",
-      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=369.46228530681014&index=24",
+      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=856.9401355224495&index=19",
       "kategorie": "schulstellen",
       "lat": 51.4818111,
       "lon": 7.2196635,
-      "first_seen": "2026-06-29"
+      "first_seen": "2026-06-30"
     },
     {
       "titel": "Konrektor/-in (w/m/d)",
@@ -361,11 +291,11 @@
       "besoldung": "A 13 Fn 4 LBesO / EG 13 TV-L plus Zulage nach",
       "besetzung": "nächstmöglich - vorbehaltlich der",
       "frist": "10.08.2026",
-      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=369.46228530681014&index=25",
+      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=856.9401355224495&index=20",
       "kategorie": "schulstellen",
       "lat": 51.4928078,
       "lon": 7.2465776,
-      "first_seen": "2026-06-29"
+      "first_seen": "2026-06-30"
     },
     {
       "titel": "Konrektor/-in (w/m/d)",
@@ -375,11 +305,11 @@
       "besoldung": "A 13 Fn 4 LBesO / EG 13 TV-L plus Zulage nach LBesG analog",
       "besetzung": "nächstmöglich - vorbehaltlich der",
       "frist": "10.08.2026",
-      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=369.46228530681014&index=26",
+      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=856.9401355224495&index=21",
       "kategorie": "schulstellen",
       "lat": 51.5119083,
       "lon": 7.1699589,
-      "first_seen": "2026-06-29"
+      "first_seen": "2026-06-30"
     },
     {
       "titel": "Zweite/-r Konrektor/-in (w/m/d)",
@@ -393,7 +323,7 @@
       "kategorie": "schulstellen",
       "lat": 51.6142482,
       "lon": 7.5228088,
-      "first_seen": "2026-06-29"
+      "first_seen": "2026-06-30"
     },
     {
       "titel": "Fachleiter/-in zur Koordinierung schulfachlicher Aufgaben (w/m/d)",
@@ -403,11 +333,11 @@
       "besoldung": "A 15 LBesO /  EG 15 TV-L",
       "besetzung": "nach haushaltsrechtlicher Verfügbarkeit",
       "frist": "03.07.2026",
-      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=369.46228530681014&index=0",
+      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=856.9401355224495&index=0",
       "kategorie": "schulstellen",
       "lat": 51.5142273,
       "lon": 7.4652789,
-      "first_seen": "2026-06-29"
+      "first_seen": "2026-06-30"
     },
     {
       "titel": "Fachleiter/-in zur Koordinierung schulfachlicher Aufgaben (w/m/d)",
@@ -417,11 +347,11 @@
       "besoldung": "A 15 LBesO /  EG 15 TV-L",
       "besetzung": "nach haushaltsrechtlicher Verfügbarkeit",
       "frist": "03.07.2026",
-      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=369.46228530681014&index=1",
+      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=856.9401355224495&index=1",
       "kategorie": "schulstellen",
       "lat": 51.5142273,
       "lon": 7.4652789,
-      "first_seen": "2026-06-29"
+      "first_seen": "2026-06-30"
     },
     {
       "titel": "Fachleiter/-in zur Koordinierung schulfachlicher Aufgaben (w/m/d)",
@@ -431,11 +361,11 @@
       "besoldung": "A 15 LBesO / EG 15 TV-L",
       "besetzung": "nach haushaltsrechtlicher Verfügbarkeit",
       "frist": "03.07.2026",
-      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=369.46228530681014&index=2",
+      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=856.9401355224495&index=2",
       "kategorie": "schulstellen",
       "lat": 51.4909274,
       "lon": 7.1872559,
-      "first_seen": "2026-06-29"
+      "first_seen": "2026-06-30"
     },
     {
       "titel": "Fachleiter/-in zur Koordinierung schulfachlicher Aufgaben (w/m/d)",
@@ -445,11 +375,11 @@
       "besoldung": "A 15 LBesO NRW bzw. EG 15 TV-L",
       "besetzung": "01.08.2026 - vorbehaltlich der haushaltsrechtlichen Verfügbarkeit",
       "frist": "06.07.2026",
-      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=369.46228530681014&index=3",
+      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=856.9401355224495&index=3",
       "kategorie": "schulstellen",
       "lat": 51.5113834,
       "lon": 7.473218,
-      "first_seen": "2026-06-29"
+      "first_seen": "2026-06-30"
     },
     {
       "titel": "Abteilungsleiter/-in (w/m/d)",
@@ -463,7 +393,7 @@
       "kategorie": "schulstellen",
       "lat": 51.5142273,
       "lon": 7.4652789,
-      "first_seen": "2026-06-29"
+      "first_seen": "2026-06-30"
     },
     {
       "titel": "Koordinator/-in (w/m/d)",
@@ -473,11 +403,11 @@
       "besoldung": "A 13 LBesO / Entgeltgruppe 13 EntgO-L (siehe auch weitere Hinweise)",
       "besetzung": "sofort",
       "frist": "23.07.2026",
-      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=369.46228530681014&index=5",
+      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=856.9401355224495&index=5",
       "kategorie": "schulstellen",
       "lat": 51.7380176,
       "lon": 7.5251792,
-      "first_seen": "2026-06-29"
+      "first_seen": "2026-06-30"
     },
     {
       "titel": "Fachleiter/-in zur Koordinierung schulfachlicher Aufgaben (w/m/d)",
@@ -487,11 +417,11 @@
       "besoldung": "A 15 LBesO /  EG 15 TV-L",
       "besetzung": "01.08.2026 bzw. nach haushaltsrechtlicher Verfügbarkeit",
       "frist": "27.07.2026",
-      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=369.46228530681014&index=6",
+      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=856.9401355224495&index=6",
       "kategorie": "schulstellen",
       "lat": 51.5142273,
       "lon": 7.4652789,
-      "first_seen": "2026-06-29"
+      "first_seen": "2026-06-30"
     },
     {
       "titel": "Fachleiter/-in zur Koordinierung schulfachlicher Aufgaben (w/m/d)",
@@ -501,11 +431,11 @@
       "besoldung": "A 15 LBesO / EG 15 TV-L",
       "besetzung": "nach haushaltsrechtlicher Verfügbarkeit, frühestens 01.08.2026",
       "frist": "27.07.2026",
-      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=369.46228530681014&index=7",
+      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=856.9401355224495&index=7",
       "kategorie": "schulstellen",
       "lat": 51.4818111,
       "lon": 7.2196635,
-      "first_seen": "2026-06-29"
+      "first_seen": "2026-06-30"
     },
     {
       "titel": "Fachleiter/-in zur Koordinierung schulfachlicher Aufgaben (w/m/d)",
@@ -515,11 +445,11 @@
       "besoldung": "A 15 LBesO /  EG 15 TV-L",
       "besetzung": "01.08.2026 bzw. nach haushaltsrechtlicher Verfügbarkeit",
       "frist": "27.07.2026",
-      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=369.46228530681014&index=8",
+      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=856.9401355224495&index=8",
       "kategorie": "schulstellen",
       "lat": 51.5142273,
       "lon": 7.4652789,
-      "first_seen": "2026-06-29"
+      "first_seen": "2026-06-30"
     },
     {
       "titel": "Koordinator/-in (w/m/d)",
@@ -529,11 +459,11 @@
       "besoldung": "A 13 LBesO / Entgeltgruppe 13 EntgO-L (siehe auch weitere Hinweise)",
       "besetzung": "sofort",
       "frist": "06.08.2026",
-      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=369.46228530681014&index=9",
+      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=856.9401355224495&index=9",
       "kategorie": "schulstellen",
       "lat": 51.6143815,
       "lon": 7.1978546,
-      "first_seen": "2026-06-29"
+      "first_seen": "2026-06-30"
     },
     {
       "titel": "Fachleiter/-in zur Koordinierung schulfachlicher Aufgaben (w/m/d)",
@@ -543,557 +473,11 @@
       "besoldung": "A 15 LBesO / EG 15 TV-L",
       "besetzung": "01.08.2026 bzw. nach haushaltsrechtlicher Verfügbarkeit",
       "frist": "10.08.2026",
-      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=369.46228530681014&index=10",
+      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=856.9401355224495&index=10",
       "kategorie": "schulstellen",
       "lat": 51.3582945,
       "lon": 7.473296,
-      "first_seen": "2026-06-29"
-    },
-    {
-      "titel": "Oberstudienrat/-rätin (w/m/d)",
-      "beschreibung": "Oberstudienrat/-rätin bzw. Lehrkraft im Tarifbeschäftigungsverhältnis in der Entgeltgruppe 14 TV-L",
-      "ort": "Witten",
-      "schulname": "Städt. Schiller-Gymnasium - Sekundarstufen I und II -",
-      "besoldung": "A 14 LBesO / EG 14 TV-L",
-      "besetzung": "01.08.2026 - vorbehaltlich der haushaltsrechtlichen Verfügbarkeit -",
-      "frist": "29.06.2026",
-      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=369.46228530681014&index=0",
-      "kategorie": "schulstellen",
-      "lat": 51.4370171,
-      "lon": 7.335124,
-      "first_seen": "2026-06-29"
-    },
-    {
-      "titel": "Oberstudienrat/-rätin (w/m/d)",
-      "beschreibung": "Oberstudienrat/-rätin bzw. Lehrkraft im Tarifbeschäftigungsverhältnis in der Entgeltgruppe 14 TV-L",
-      "ort": "Bochum",
-      "schulname": "Ottilie-Schoenewald-Weiterbildungskolleg der Stadt Bochum Abendrealschule,Abendgymnasium u. Kolleg",
-      "besoldung": "A 14 LBesO / EG 14 TV-L",
-      "besetzung": "01.08.2026 - vorbehaltlich der haushaltsrechtlichen Verfügbarkeit -",
-      "frist": "29.06.2026",
-      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=369.46228530681014&index=1",
-      "kategorie": "schulstellen",
-      "lat": 51.4818111,
-      "lon": 7.2196635,
-      "first_seen": "2026-06-29"
-    },
-    {
-      "titel": "Oberstudienrat/-rätin (w/m/d)",
-      "beschreibung": "Oberstudienrat/-rätin bzw. Lehrkraft im Tarifbeschäftigungsverhältnis in der Entgeltgruppe 14 TV-L",
-      "ort": "Hagen",
-      "schulname": "Weiterbildungskolleg der Stadt Hagen Rahel-Varnhagen-Kolleg Abendrealschule, Abendgymnasium, Kolleg",
-      "besoldung": "A 14 LBesO / EG 14 TV-L",
-      "besetzung": "01.08.2026 - vorbehaltlich der haushaltsrechtlichen Verfügbarkeit -",
-      "frist": "29.06.2026",
-      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=369.46228530681014&index=2",
-      "kategorie": "schulstellen",
-      "lat": 51.3582945,
-      "lon": 7.473296,
-      "first_seen": "2026-06-29"
-    },
-    {
-      "titel": "Oberstudienrat/-rätin (w/m/d)",
-      "beschreibung": "Oberstudienrat/-rätin bzw. Lehrkraft im Tarifbeschäftigungsverhältnis in der Entgeltgruppe 14 TV-L",
-      "ort": "Gevelsberg",
-      "schulname": "Städt. Gymnasium Gevelsberg",
-      "besoldung": "A 14 LBesO / EG 14 TV-L",
-      "besetzung": "01.08.2026 - vorbehaltlich der haushaltsrechtlichen Verfügbarkeit -",
-      "frist": "29.06.2026",
-      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=369.46228530681014&index=3",
-      "kategorie": "schulstellen",
-      "lat": 51.3207417,
-      "lon": 7.3404792,
-      "first_seen": "2026-06-29"
-    },
-    {
-      "titel": "Oberstudienrat/-rätin (w/m/d)",
-      "beschreibung": "Oberstudienrat/-rätin bzw. Lehrkraft im Tarifbeschäftigungsverhältnis in der Entgeltgruppe 14 TV-L",
-      "ort": "Hagen",
-      "schulname": "Albrecht-Dürer-Gymnasium Gymnasium der Stadt Hagen",
-      "besoldung": "A 14 LBesO / EG 14 TV-L",
-      "besetzung": "01.08.2026 - vorbehaltlich der haushaltsrechtlichen Verfügbarkeit -",
-      "frist": "29.06.2026",
-      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=369.46228530681014&index=4",
-      "kategorie": "schulstellen",
-      "lat": 51.3582945,
-      "lon": 7.473296,
-      "first_seen": "2026-06-29"
-    },
-    {
-      "titel": "Oberstudienrat/-rätin (w/m/d)",
-      "beschreibung": "Oberstudienrat/-rätin bzw. Lehrkraft im Tarifbeschäftigungsverhältnis in der Entgeltgruppe 14 TV-L",
-      "ort": "Hagen",
-      "schulname": "Christian-Rohlfs-Gymnasium Städt. Gymnasium für Jungen und Mädchen",
-      "besoldung": "A 14 LBesO / EG 14 TV-L",
-      "besetzung": "01.08.2026 - vorbehaltlich der haushaltsrechtlichen Verfügbarkeit -",
-      "frist": "29.06.2026",
-      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=369.46228530681014&index=5",
-      "kategorie": "schulstellen",
-      "lat": 51.3582945,
-      "lon": 7.473296,
-      "first_seen": "2026-06-29"
-    },
-    {
-      "titel": "Oberstudienrat/-rätin (w/m/d)",
-      "beschreibung": "Oberstudienrat/-rätin bzw. Lehrkraft im Tarifbeschäftigungsverhältnis in der Entgeltgruppe 14 TV-L",
-      "ort": "Hagen",
-      "schulname": "Gymnasium Hohenlimburg der Stadt Hagen",
-      "besoldung": "A 14 LBesO / EG 14 TV-L",
-      "besetzung": "01.08.2026 - vorbehaltlich der haushaltsrechtlichen Verfügbarkeit -",
-      "frist": "29.06.2026",
-      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=369.46228530681014&index=6",
-      "kategorie": "schulstellen",
-      "lat": 51.3582945,
-      "lon": 7.473296,
-      "first_seen": "2026-06-29"
-    },
-    {
-      "titel": "Oberstudienrat/-rätin (w/m/d)",
-      "beschreibung": "Oberstudienrat/-rätin bzw. Lehrkraft im Tarifbeschäftigungsverhältnis in der Entgeltgruppe 14 TV-L",
-      "ort": "Hagen",
-      "schulname": "Ricarda-Huch-Gymnasium - Gymnasium der Stadt Hagen -",
-      "besoldung": "A 14 LBesO / EG 14 TV-L",
-      "besetzung": "01.08.2026 - vorbehaltlich der haushaltsrechtlichen Verfügbarkeit -",
-      "frist": "29.06.2026",
-      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=369.46228530681014&index=7",
-      "kategorie": "schulstellen",
-      "lat": 51.3582945,
-      "lon": 7.473296,
-      "first_seen": "2026-06-29"
-    },
-    {
-      "titel": "Oberstudienrat/-rätin (w/m/d)",
-      "beschreibung": "Oberstudienrat/-rätin bzw. Lehrkraft im Tarifbeschäftigungsverhältnis in der Entgeltgruppe 14 TV-L",
-      "ort": "Hagen",
-      "schulname": "Theodor-Heuss-Gymnasium Gymnasium der Stadt Hagen für Jungen und Mädchen",
-      "besoldung": "A 14 LBesO / EG 14 TV-L",
-      "besetzung": "01.08.2026 - vorbehaltlich der haushaltsrechtlichen Verfügbarkeit -",
-      "frist": "29.06.2026",
-      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=369.46228530681014&index=8",
-      "kategorie": "schulstellen",
-      "lat": 51.3582945,
-      "lon": 7.473296,
-      "first_seen": "2026-06-29"
-    },
-    {
-      "titel": "Oberstudienrat/-rätin (w/m/d)",
-      "beschreibung": "Oberstudienrat/-rätin bzw. Lehrkraft im Tarifbeschäftigungsverhältnis in der Entgeltgruppe 14 TV-L",
-      "ort": "Herdecke",
-      "schulname": "Friedrich-Harkort-Schule Städt. Gymnasium",
-      "besoldung": "A 14 LBesO / EG 14 TV-L",
-      "besetzung": "01.08.2026 - vorbehaltlich der haushaltsrechtlichen Verfügbarkeit -",
-      "frist": "29.06.2026",
-      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=369.46228530681014&index=9",
-      "kategorie": "schulstellen",
-      "lat": 51.4001119,
-      "lon": 7.4330062,
-      "first_seen": "2026-06-29"
-    },
-    {
-      "titel": "Oberstudienrat/-rätin (w/m/d)",
-      "beschreibung": "Oberstudienrat/-rätin bzw. Lehrkraft im Tarifbeschäftigungsverhältnis in der Entgeltgruppe 14 TV-L",
-      "ort": "Wetter (Ruhr)",
-      "schulname": "Geschwister-Scholl-Gymnasium Städtisches Gymnasium",
-      "besoldung": "A 14 LBesO / EG 14 TV-L",
-      "besetzung": "01.08.2026 - vorbehaltlich der haushaltsrechtlichen Verfügbarkeit -",
-      "frist": "29.06.2026",
-      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=369.46228530681014&index=10",
-      "kategorie": "schulstellen",
-      "lat": 51.3879463,
-      "lon": 7.3951553,
-      "first_seen": "2026-06-29"
-    },
-    {
-      "titel": "Oberstudienrat/-rätin (w/m/d)",
-      "beschreibung": "Oberstudienrat/-rätin bzw. Lehrkraft im Tarifbeschäftigungsverhältnis in der Entgeltgruppe 14 TV-L",
-      "ort": "Witten",
-      "schulname": "Städt. Ruhr-Gymnasium - Sekundarstufen I und II -",
-      "besoldung": "A 14 LBesO / EG 14 TV-L",
-      "besetzung": "01.08.2026 - vorbehaltlich der haushaltsrechtlichen Verfügbarkeit -",
-      "frist": "29.06.2026",
-      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=369.46228530681014&index=11",
-      "kategorie": "schulstellen",
-      "lat": 51.4370171,
-      "lon": 7.335124,
-      "first_seen": "2026-06-29"
-    },
-    {
-      "titel": "Oberstudienrat/-rätin (w/m/d)",
-      "beschreibung": "Oberstudienrat/-rätin bzw. Lehrkraft im Tarifbeschäftigungsverhältnis in der Entgeltgruppe 14 TV-L",
-      "ort": "Dortmund",
-      "schulname": "Bert-Brecht-Gymnasium Gymnasium der Stadt Dortmund",
-      "besoldung": "A 14 LBesO / EG 14 TV-L",
-      "besetzung": "01.08.2026 - vorbehaltlich der haushaltsrechtlichen Verfügbarkeit -",
-      "frist": "29.06.2026",
-      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=369.46228530681014&index=12",
-      "kategorie": "schulstellen",
-      "lat": 51.5142273,
-      "lon": 7.4652789,
-      "first_seen": "2026-06-29"
-    },
-    {
-      "titel": "Oberstudienrat/-rätin (w/m/d)",
-      "beschreibung": "Oberstudienrat/-rätin bzw. Lehrkraft im Tarifbeschäftigungsverhältnis in der Entgeltgruppe 14 TV-L",
-      "ort": "Dortmund",
-      "schulname": "Goethe-Gymnasium Gymnasium der Stadt Dortmund",
-      "besoldung": "A 14 LBesO / EG 14 TV-L",
-      "besetzung": "01.08.2026 - vorbehaltlich der haushaltsrechtlichen Verfügbarkeit -",
-      "frist": "29.06.2026",
-      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=369.46228530681014&index=13",
-      "kategorie": "schulstellen",
-      "lat": 51.5142273,
-      "lon": 7.4652789,
-      "first_seen": "2026-06-29"
-    },
-    {
-      "titel": "Oberstudienrat/-rätin (w/m/d)",
-      "beschreibung": "Oberstudienrat/-rätin bzw. Lehrkraft im Tarifbeschäftigungsverhältnis in der Entgeltgruppe 14 TV-L",
-      "ort": "Dortmund",
-      "schulname": "Heinrich-Heine-Gymnasium Städt. Gymnasium",
-      "besoldung": "A 14 LBesO / EG 14 TV-L",
-      "besetzung": "01.08.2026 - vorbehaltlich der haushaltsrechtlichen Verfügbarkeit -",
-      "frist": "29.06.2026",
-      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=369.46228530681014&index=14",
-      "kategorie": "schulstellen",
-      "lat": 51.5142273,
-      "lon": 7.4652789,
-      "first_seen": "2026-06-29"
-    },
-    {
-      "titel": "Oberstudienrat/-rätin (w/m/d)",
-      "beschreibung": "Oberstudienrat/-rätin bzw. Lehrkraft im Tarifbeschäftigungsverhältnis in der Entgeltgruppe 14 TV-L",
-      "ort": "Dortmund",
-      "schulname": "Heisenberg-Gymnasium Dortmund Städtisches Gymnasium",
-      "besoldung": "A 14 LBesO / EG 14 TV-L",
-      "besetzung": "01.08.2026 - vorbehaltlich der haushaltsrechtlichen Verfügbarkeit -",
-      "frist": "29.06.2026",
-      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=369.46228530681014&index=15",
-      "kategorie": "schulstellen",
-      "lat": 51.5142273,
-      "lon": 7.4652789,
-      "first_seen": "2026-06-29"
-    },
-    {
-      "titel": "Oberstudienrat/-rätin (w/m/d)",
-      "beschreibung": "Oberstudienrat/-rätin bzw. Lehrkraft im Tarifbeschäftigungsverhältnis in der Entgeltgruppe 14 TV-L",
-      "ort": "Dortmund",
-      "schulname": "Immanuel-Kant-Gymnasium Gymnasium der Stadt Dortmund",
-      "besoldung": "A 14 LBesO / EG 14 TV-L",
-      "besetzung": "01.08.2026 - vorbehaltlich der haushaltsrechtlichen Verfügbarkeit -",
-      "frist": "29.06.2026",
-      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=369.46228530681014&index=16",
-      "kategorie": "schulstellen",
-      "lat": 51.5142273,
-      "lon": 7.4652789,
-      "first_seen": "2026-06-29"
-    },
-    {
-      "titel": "Oberstudienrat/-rätin (w/m/d)",
-      "beschreibung": "Oberstudienrat/-rätin bzw. Lehrkraft im Tarifbeschäftigungsverhältnis in der Entgeltgruppe 14 TV-L",
-      "ort": "Dortmund",
-      "schulname": "Gymnasium an der Schweizer Allee Gymnasium der Stadt Dortmund",
-      "besoldung": "A 14 LBesO / EG 14 TV-L",
-      "besetzung": "01.08.2026 - vorbehaltlich der haushaltsrechtlichen Verfügbarkeit -",
-      "frist": "29.06.2026",
-      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=369.46228530681014&index=17",
-      "kategorie": "schulstellen",
-      "lat": 51.4915923,
-      "lon": 7.5646596,
-      "first_seen": "2026-06-29"
-    },
-    {
-      "titel": "Oberstudienrat/-rätin (w/m/d)",
-      "beschreibung": "Oberstudienrat/-rätin bzw. Lehrkraft im Tarifbeschäftigungsverhältnis in der Entgeltgruppe 14 TV-L",
-      "ort": "Dortmund",
-      "schulname": "Helmholtz-Gymnasium Dortmund Städt. Gymnasium",
-      "besoldung": "A 14 LBesO / EG 14 TV-L",
-      "besetzung": "01.08.2026 - vorbehaltlich der haushaltsrechtlichen Verfügbarkeit -",
-      "frist": "29.06.2026",
-      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=369.46228530681014&index=18",
-      "kategorie": "schulstellen",
-      "lat": 51.5142273,
-      "lon": 7.4652789,
-      "first_seen": "2026-06-29"
-    },
-    {
-      "titel": "Oberstudienrat/-rätin (w/m/d)",
-      "beschreibung": "Oberstudienrat/-rätin bzw. Lehrkraft im Tarifbeschäftigungsverhältnis in der Entgeltgruppe 14 TV-L",
-      "ort": "Dortmund",
-      "schulname": "Max-Planck-Gymnasium Dortmund Städt. Gymnasium",
-      "besoldung": "A 14 LBesO / EG 14 TV-L",
-      "besetzung": "01.08.2026 - vorbehaltlich der haushaltsrechtlichen Verfügbarkeit -",
-      "frist": "29.06.2026",
-      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=369.46228530681014&index=19",
-      "kategorie": "schulstellen",
-      "lat": 51.5142273,
-      "lon": 7.4652789,
-      "first_seen": "2026-06-29"
-    },
-    {
-      "titel": "Oberstudienrat/-rätin (w/m/d)",
-      "beschreibung": "Oberstudienrat/-rätin bzw. Lehrkraft im Tarifbeschäftigungsverhältnis in der Entgeltgruppe 14 TV-L",
-      "ort": "Dortmund",
-      "schulname": "Käthe-Kollwitz-Gymnasium der Stadt Dortmund",
-      "besoldung": "A 14 LBesO / EG 14 TV-L",
-      "besetzung": "01.08.2026 - vorbehaltlich der haushaltsrechtlichen Verfügbarkeit -",
-      "frist": "29.06.2026",
-      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=369.46228530681014&index=20",
-      "kategorie": "schulstellen",
-      "lat": 51.5142273,
-      "lon": 7.4652789,
-      "first_seen": "2026-06-29"
-    },
-    {
-      "titel": "Oberstudienrat/-rätin (w/m/d)",
-      "beschreibung": "Oberstudienrat/-rätin bzw. Lehrkraft im Tarifbeschäftigungsverhältnis in der Entgeltgruppe 14 TV-L",
-      "ort": "Dortmund",
-      "schulname": "Stadtgymnasium Dortmund",
-      "besoldung": "A 14 LBesO / EG 14 TV-L",
-      "besetzung": "01.08.2026 - vorbehaltlich der haushaltsrechtlichen Verfügbarkeit -",
-      "frist": "29.06.2026",
-      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=369.46228530681014&index=21",
-      "kategorie": "schulstellen",
-      "lat": 51.5113834,
-      "lon": 7.473218,
-      "first_seen": "2026-06-29"
-    },
-    {
-      "titel": "Oberstudienrat/-rätin (w/m/d)",
-      "beschreibung": "Oberstudienrat/-rätin bzw. Lehrkraft im Tarifbeschäftigungsverhältnis in der Entgeltgruppe 14 TV-L",
-      "ort": "Dortmund",
-      "schulname": "Leibniz-Gymnasium Gymnasium der Stadt Dortmund",
-      "besoldung": "A 14 LBesO / EG 14 TV-L",
-      "besetzung": "01.08.2026 - vorbehaltlich der haushaltsrechtlichen Verfügbarkeit -",
-      "frist": "29.06.2026",
-      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=369.46228530681014&index=22",
-      "kategorie": "schulstellen",
-      "lat": 51.5142273,
-      "lon": 7.4652789,
-      "first_seen": "2026-06-29"
-    },
-    {
-      "titel": "Oberstudienrat/-rätin (w/m/d)",
-      "beschreibung": "Oberstudienrat/-rätin bzw. Lehrkraft im Tarifbeschäftigungsverhältnis in der Entgeltgruppe 14 TV-L",
-      "ort": "Bönen",
-      "schulname": "Marie-Curie-Gymnasium Gymnasium der Gemeinde Bönen",
-      "besoldung": "A 14 LBesO / EG 14 TV-L",
-      "besetzung": "01.08.2026 - vorbehaltlich der haushaltsrechtlichen Verfügbarkeit -",
-      "frist": "29.06.2026",
-      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=369.46228530681014&index=23",
-      "kategorie": "schulstellen",
-      "lat": 51.598077,
-      "lon": 7.7588538,
-      "first_seen": "2026-06-29"
-    },
-    {
-      "titel": "Oberstudienrat/-rätin (w/m/d)",
-      "beschreibung": "Oberstudienrat/-rätin bzw. Lehrkraft im Tarifbeschäftigungsverhältnis in der Entgeltgruppe 14 TV-L",
-      "ort": "Holzwickede",
-      "schulname": "Clara-Schumann-Gymnasium",
-      "besoldung": "A 14 LBesO / EG 14 TV-L",
-      "besetzung": "01.08.2026 - vorbehaltlich der haushaltsrechtlichen Verfügbarkeit -",
-      "frist": "29.06.2026",
-      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=369.46228530681014&index=24",
-      "kategorie": "schulstellen",
-      "lat": 51.4964018,
-      "lon": 7.6251038,
-      "first_seen": "2026-06-29"
-    },
-    {
-      "titel": "Oberstudienrat/-rätin (w/m/d)",
-      "beschreibung": "Oberstudienrat/-rätin bzw. Lehrkraft im Tarifbeschäftigungsverhältnis in der Entgeltgruppe 14 TV-L",
-      "ort": "Iserlohn",
-      "schulname": "Gymnasium Letmathe der Stadt Iserlohn",
-      "besoldung": "A 14 LBesO / EG 14 TV-L",
-      "besetzung": "01.08.2026 - vorbehaltlich der haushaltsrechtlichen Verfügbarkeit -",
-      "frist": "29.06.2026",
-      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=369.46228530681014&index=25",
-      "kategorie": "schulstellen",
-      "lat": 51.3726878,
-      "lon": 7.6057877,
-      "first_seen": "2026-06-29"
-    },
-    {
-      "titel": "Oberstudienrat/-rätin (w/m/d)",
-      "beschreibung": "Oberstudienrat/-rätin bzw. Lehrkraft im Tarifbeschäftigungsverhältnis in der Entgeltgruppe 14 TV-L",
-      "ort": "Lünen",
-      "schulname": "Städt. Gymnasium Lünen-Altlünen",
-      "besoldung": "A 14 LBesO / EG 14 TV-L",
-      "besetzung": "01.08.2026 - vorbehaltlich der haushaltsrechtlichen Verfügbarkeit -",
-      "frist": "29.06.2026",
-      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=369.46228530681014&index=26",
-      "kategorie": "schulstellen",
-      "lat": 51.6142482,
-      "lon": 7.5228088,
-      "first_seen": "2026-06-29"
-    },
-    {
-      "titel": "Oberstudienrat/-rätin (w/m/d)",
-      "beschreibung": "Oberstudienrat/-rätin bzw. Lehrkraft im Tarifbeschäftigungsverhältnis in der Entgeltgruppe 14 TV-L",
-      "ort": "Lünen",
-      "schulname": "Freiherr-vom-Stein-Gymnasium - Sekundarstufen I und II -",
-      "besoldung": "A 14 LBesO / EG 14 TV-L",
-      "besetzung": "01.08.2026 - vorbehaltlich der haushaltsrechtlichen Verfügbarkeit -",
-      "frist": "29.06.2026",
-      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=369.46228530681014&index=27",
-      "kategorie": "schulstellen",
-      "lat": 51.6142482,
-      "lon": 7.5228088,
-      "first_seen": "2026-06-29"
-    },
-    {
-      "titel": "Oberstudienrat/-rätin (w/m/d)",
-      "beschreibung": "Oberstudienrat/-rätin bzw. Lehrkraft im Tarifbeschäftigungsverhältnis in der Entgeltgruppe 14 TV-L",
-      "ort": "Menden (Sauerland)",
-      "schulname": "Städtisches Gymnasium an der Hönne Menden - Sekundarstufen I und II -",
-      "besoldung": "A 14 LBesO / EG 14 TV-L",
-      "besetzung": "01.08.2026 - vorbehaltlich der haushaltsrechtlichen Verfügbarkeit -",
-      "frist": "29.06.2026",
-      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=369.46228530681014&index=28",
-      "kategorie": "schulstellen",
-      "lat": 51.4344791,
-      "lon": 7.7967667,
-      "first_seen": "2026-06-29"
-    },
-    {
-      "titel": "Oberstudienrat/-rätin (w/m/d)",
-      "beschreibung": "Oberstudienrat/-rätin bzw. Lehrkraft im Tarifbeschäftigungsverhältnis in der Entgeltgruppe 14 TV-L",
-      "ort": "Schwerte",
-      "schulname": "Städt. Friedrich-Bährens-Gymnasium",
-      "besoldung": "A 14 LBesO / EG 14 TV-L",
-      "besetzung": "01.08.2026 - vorbehaltlich der haushaltsrechtlichen Verfügbarkeit -",
-      "frist": "29.06.2026",
-      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=369.46228530681014&index=29",
-      "kategorie": "schulstellen",
-      "lat": 51.445525,
-      "lon": 7.5674652,
-      "first_seen": "2026-06-29"
-    },
-    {
-      "titel": "Oberstudienrat/-rätin (w/m/d)",
-      "beschreibung": "Oberstudienrat/-rätin bzw. Lehrkraft im Tarifbeschäftigungsverhältnis in der Entgeltgruppe 14 TV-L",
-      "ort": "Selm",
-      "schulname": "Städt. Gymnasium Selm - Sekundarstufen I und II -",
-      "besoldung": "A 14 LBesO / EG 14 TV-L",
-      "besetzung": "01.08.2026 - vorbehaltlich der haushaltsrechtlichen Verfügbarkeit -",
-      "frist": "29.06.2026",
-      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=369.46228530681014&index=30",
-      "kategorie": "schulstellen",
-      "lat": 51.7005549,
-      "lon": 7.468614,
-      "first_seen": "2026-06-29"
-    },
-    {
-      "titel": "Oberstudienrat/-rätin (w/m/d)",
-      "beschreibung": "Oberstudienrat/-rätin bzw. Lehrkraft im Tarifbeschäftigungsverhältnis in der Entgeltgruppe 14 TV-L",
-      "ort": "Unna",
-      "schulname": "Pestalozzi-Gymnasium Städt. Gymnasium mit Sekundarstufen I und II",
-      "besoldung": "A 14 LBesO / EG 14 TV-L",
-      "besetzung": "01.08.2026 - vorbehaltlich der haushaltsrechtlichen Verfügbarkeit -",
-      "frist": "29.06.2026",
-      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=369.46228530681014&index=31",
-      "kategorie": "schulstellen",
-      "lat": 51.5348835,
-      "lon": 7.689014,
-      "first_seen": "2026-06-29"
-    },
-    {
-      "titel": "Oberstudienrat/-rätin (w/m/d)",
-      "beschreibung": "Oberstudienrat/-rätin bzw. Lehrkraft im Tarifbeschäftigungsverhältnis in der Entgeltgruppe 14 TV-L",
-      "ort": "Werne",
-      "schulname": "Anne-Frank-Gymnasium Städt. Gymnasium Sekundarstufen I und II",
-      "besoldung": "A 14 LBesO / EG 14 TV-L",
-      "besetzung": "01.08.2026 - vorbehaltlich der haushaltsrechtlichen Verfügbarkeit -",
-      "frist": "29.06.2026",
-      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=369.46228530681014&index=32",
-      "kategorie": "schulstellen",
-      "lat": 51.66268,
-      "lon": 7.6355052,
-      "first_seen": "2026-06-29"
-    },
-    {
-      "titel": "Oberstudienrat/-rätin (w/m/d)",
-      "beschreibung": "Oberstudienrat/-rätin bzw. Lehrkraft im Tarifbeschäftigungsverhältnis in der Entgeltgruppe 14 TV-L",
-      "ort": "Bochum",
-      "schulname": "Goethe-Schule Städt. Gymnasium für Jungen und Mädchen",
-      "besoldung": "A 14 LBesO / EG 14 TV-L",
-      "besetzung": "01.08.2026 - vorbehaltlich der haushaltsrechtlichen Verfügbarkeit -",
-      "frist": "29.06.2026",
-      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=369.46228530681014&index=33",
-      "kategorie": "schulstellen",
-      "lat": 51.4818111,
-      "lon": 7.2196635,
-      "first_seen": "2026-06-29"
-    },
-    {
-      "titel": "Oberstudienrat/-rätin (w/m/d)",
-      "beschreibung": "Oberstudienrat/-rätin bzw. Lehrkraft im Tarifbeschäftigungsverhältnis in der Entgeltgruppe 14 TV-L",
-      "ort": "Bochum",
-      "schulname": "Graf-Engelbert-Gymnasium Bochum",
-      "besoldung": "A 14 LBesO / EG 14 TV-L",
-      "besetzung": "01.08.2026 - vorbehaltlich der haushaltsrechtlichen Verfügbarkeit -",
-      "frist": "29.06.2026",
-      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=369.46228530681014&index=34",
-      "kategorie": "schulstellen",
-      "lat": 51.4662929,
-      "lon": 7.2202622,
-      "first_seen": "2026-06-29"
-    },
-    {
-      "titel": "Oberstudienrat/-rätin (w/m/d)",
-      "beschreibung": "Oberstudienrat/-rätin bzw. Lehrkraft im Tarifbeschäftigungsverhältnis in der Entgeltgruppe 14 TV-L",
-      "ort": "Bochum",
-      "schulname": "Hellweg-Gymnasium Bochum Europaschule in NRW",
-      "besoldung": "A 14 LBesO / EG 14 TV-L",
-      "besetzung": "01.08.2026 - vorbehaltlich der haushaltsrechtlichen Verfügbarkeit -",
-      "frist": "29.06.2026",
-      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=369.46228530681014&index=35",
-      "kategorie": "schulstellen",
-      "lat": 51.4818111,
-      "lon": 7.2196635,
-      "first_seen": "2026-06-29"
-    },
-    {
-      "titel": "Oberstudienrat/-rätin (w/m/d)",
-      "beschreibung": "Oberstudienrat/-rätin bzw. Lehrkraft im Tarifbeschäftigungsverhältnis in der Entgeltgruppe 14 TV-L",
-      "ort": "Bochum",
-      "schulname": "Märkisches Gymnasium Wattenscheid Schule der Stadt Bochum",
-      "besoldung": "A 14 LBesO / EG 14 TV-L",
-      "besetzung": "01.08.2026 - vorbehaltlich der haushaltsrechtlichen Verfügbarkeit -",
-      "frist": "29.06.2026",
-      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=369.46228530681014&index=36",
-      "kategorie": "schulstellen",
-      "lat": 51.4778592,
-      "lon": 7.1364782,
-      "first_seen": "2026-06-29"
-    },
-    {
-      "titel": "Oberstudienrat/-rätin (w/m/d)",
-      "beschreibung": "Oberstudienrat/-rätin bzw. Lehrkraft im Tarifbeschäftigungsverhältnis in der Entgeltgruppe 14 TV-L",
-      "ort": "Bochum",
-      "schulname": "Theodor-Körner-Schule Gymnasium der Stadt Bochum",
-      "besoldung": "A 14 LBesO / EG 14 TV-L",
-      "besetzung": "01.08.2026 - vorbehaltlich der haushaltsrechtlichen Verfügbarkeit -",
-      "frist": "29.06.2026",
-      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=369.46228530681014&index=37",
-      "kategorie": "schulstellen",
-      "lat": 51.4818111,
-      "lon": 7.2196635,
-      "first_seen": "2026-06-29"
-    },
-    {
-      "titel": "Oberstudienrat/-rätin (w/m/d)",
-      "beschreibung": "Oberstudienrat/-rätin bzw. Lehrkraft im Tarifbeschäftigungsverhältnis in der Entgeltgruppe 14 TV-L",
-      "ort": "Herne",
-      "schulname": "Pestalozzi-Gymnasium Städt. Gymnasium für Jungen und Mädchen",
-      "besoldung": "A 14 LBesO / EG 14 TV-L",
-      "besetzung": "01.08.2026 - vorbehaltlich der haushaltsrechtlichen Verfügbarkeit -",
-      "frist": "29.06.2026",
-      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=369.46228530681014&index=38",
-      "kategorie": "schulstellen",
-      "lat": 51.5380394,
-      "lon": 7.219985,
-      "first_seen": "2026-06-29"
+      "first_seen": "2026-06-30"
     },
     {
       "titel": "Oberstudienrat/-rätin (w/m/d)",
@@ -1103,11 +487,11 @@
       "besoldung": "A 14 LBesO / EG 14 TV-L",
       "besetzung": "01.08.2026 - vorbehaltlich der haushaltsrechtlichen Verfügbarkeit -",
       "frist": "03.07.2026",
-      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=369.46228530681014&index=39",
+      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=856.9401355224495&index=0",
       "kategorie": "schulstellen",
       "lat": 51.5918019,
       "lon": 7.6616804,
-      "first_seen": "2026-06-29"
+      "first_seen": "2026-06-30"
     },
     {
       "titel": "Oberstudienrat/-rätin (w/m/d)",
@@ -1117,11 +501,11 @@
       "besoldung": "A 14 LBesO",
       "besetzung": "01.08.2026 bzw. nach haushaltsrechtlicher Verfügbarkeit",
       "frist": "13.07.2026",
-      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=369.46228530681014&index=40",
+      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=856.9401355224495&index=1",
       "kategorie": "schulstellen",
       "lat": 51.5142273,
       "lon": 7.4652789,
-      "first_seen": "2026-06-29"
+      "first_seen": "2026-06-30"
     },
     {
       "titel": "Oberstudienrat/-rätin (w/m/d)",
@@ -1131,11 +515,11 @@
       "besoldung": "A 14 LBesO",
       "besetzung": "01.08.2026 bzw. nach haushaltsrechtlicher Verfügbarkeit",
       "frist": "13.07.2026",
-      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=369.46228530681014&index=41",
+      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=856.9401355224495&index=2",
       "kategorie": "schulstellen",
       "lat": 51.5142273,
       "lon": 7.4652789,
-      "first_seen": "2026-06-29"
+      "first_seen": "2026-06-30"
     },
     {
       "titel": "Oberstudienrat/-rätin (w/m/d)",
@@ -1145,11 +529,11 @@
       "besoldung": "A 14 LBesO",
       "besetzung": "01.08.2026 bzw. nach haushaltsrechtlicher Verfügbarkeit",
       "frist": "13.07.2026",
-      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=369.46228530681014&index=42",
+      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=856.9401355224495&index=3",
       "kategorie": "schulstellen",
       "lat": 51.5142273,
       "lon": 7.4652789,
-      "first_seen": "2026-06-29"
+      "first_seen": "2026-06-30"
     },
     {
       "titel": "Oberstudienrat/-rätin (w/m/d)",
@@ -1159,11 +543,11 @@
       "besoldung": "A 14 LBesO",
       "besetzung": "01.08.2026 bzw. nach haushaltsrechtlicher Verfügbarkeit",
       "frist": "13.07.2026",
-      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=369.46228530681014&index=43",
+      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=856.9401355224495&index=4",
       "kategorie": "schulstellen",
       "lat": 51.5142273,
       "lon": 7.4652789,
-      "first_seen": "2026-06-29"
+      "first_seen": "2026-06-30"
     },
     {
       "titel": "Oberstudienrat/-rätin (w/m/d)",
@@ -1173,11 +557,11 @@
       "besoldung": "A 14 LBesO",
       "besetzung": "01.08.2026 bzw. nach haushaltsrechtlicher Verfügbarkeit",
       "frist": "13.07.2026",
-      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=369.46228530681014&index=44",
+      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=856.9401355224495&index=5",
       "kategorie": "schulstellen",
       "lat": 51.5142273,
       "lon": 7.4652789,
-      "first_seen": "2026-06-29"
+      "first_seen": "2026-06-30"
     },
     {
       "titel": "Oberstudienrat/-rätin (w/m/d)",
@@ -1187,11 +571,11 @@
       "besoldung": "A 14 LBesO",
       "besetzung": "01.08.2026 bzw. nach haushaltsrechtlicher Verfügbarkeit",
       "frist": "13.07.2026",
-      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=369.46228530681014&index=45",
+      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=856.9401355224495&index=6",
       "kategorie": "schulstellen",
       "lat": 51.5142273,
       "lon": 7.4652789,
-      "first_seen": "2026-06-29"
+      "first_seen": "2026-06-30"
     },
     {
       "titel": "Oberstudienrat/-rätin (w/m/d)",
@@ -1201,11 +585,11 @@
       "besoldung": "A 14 LBesO",
       "besetzung": "01.08.2026 bzw. nach haushaltsrechtlicher Verfügbarkeit",
       "frist": "13.07.2026",
-      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=369.46228530681014&index=46",
+      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=856.9401355224495&index=7",
       "kategorie": "schulstellen",
       "lat": 51.5142273,
       "lon": 7.4652789,
-      "first_seen": "2026-06-29"
+      "first_seen": "2026-06-30"
     },
     {
       "titel": "Oberstudienrat/-rätin (w/m/d)",
@@ -1215,11 +599,11 @@
       "besoldung": "A 14 LBesO",
       "besetzung": "01.08.2026 bzw. nach haushaltsrechtlicher Verfügbarkeit",
       "frist": "13.07.2026",
-      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=369.46228530681014&index=47",
+      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=856.9401355224495&index=8",
       "kategorie": "schulstellen",
       "lat": 51.5142273,
       "lon": 7.4652789,
-      "first_seen": "2026-06-29"
+      "first_seen": "2026-06-30"
     },
     {
       "titel": "Oberstudienrat/-rätin (w/m/d)",
@@ -1229,11 +613,11 @@
       "besoldung": "A 14 LBesO",
       "besetzung": "01.08.2026 bzw. nach haushaltsrechtlicher Verfügbarkeit",
       "frist": "13.07.2026",
-      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=369.46228530681014&index=48",
+      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=856.9401355224495&index=9",
       "kategorie": "schulstellen",
       "lat": 51.4370171,
       "lon": 7.335124,
-      "first_seen": "2026-06-29"
+      "first_seen": "2026-06-30"
     },
     {
       "titel": "Oberstudienrat/-rätin (w/m/d)",
@@ -1243,11 +627,11 @@
       "besoldung": "A 14 LBesO",
       "besetzung": "01.08.2026 bzw. nach haushaltsrechtlicher Verfügbarkeit",
       "frist": "13.07.2026",
-      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=369.46228530681014&index=49",
+      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=856.9401355224495&index=10",
       "kategorie": "schulstellen",
       "lat": 51.3746778,
       "lon": 7.6999713,
-      "first_seen": "2026-06-29"
+      "first_seen": "2026-06-30"
     },
     {
       "titel": "Oberstudienrat/-rätin (w/m/d)",
@@ -1257,11 +641,11 @@
       "besoldung": "A 14 LBesO",
       "besetzung": "01.08.2026 bzw. nach haushaltsrechtlicher Verfügbarkeit",
       "frist": "13.07.2026",
-      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=369.46228530681014&index=50",
+      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=856.9401355224495&index=11",
       "kategorie": "schulstellen",
       "lat": 51.43779,
       "lon": 7.7953822,
-      "first_seen": "2026-06-29"
+      "first_seen": "2026-06-30"
     },
     {
       "titel": "Oberstudienrat/-rätin (w/m/d)",
@@ -1271,11 +655,11 @@
       "besoldung": "A 14 LBesO",
       "besetzung": "01.08.2026 bzw. nach haushaltsrechtlicher Verfügbarkeit",
       "frist": "13.07.2026",
-      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=369.46228530681014&index=51",
+      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=856.9401355224495&index=12",
       "kategorie": "schulstellen",
       "lat": 51.4818111,
       "lon": 7.2196635,
-      "first_seen": "2026-06-29"
+      "first_seen": "2026-06-30"
     },
     {
       "titel": "Oberstudienrat/-rätin (w/m/d)",
@@ -1285,11 +669,11 @@
       "besoldung": "A 14 LBesO",
       "besetzung": "01.08.2026 bzw. nach haushaltsrechtlicher Verfügbarkeit",
       "frist": "13.07.2026",
-      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=369.46228530681014&index=52",
+      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=856.9401355224495&index=13",
       "kategorie": "schulstellen",
       "lat": 51.476031,
       "lon": 7.1419088,
-      "first_seen": "2026-06-29"
+      "first_seen": "2026-06-30"
     },
     {
       "titel": "Oberstudienrat/-rätin (w/m/d)",
@@ -1299,11 +683,11 @@
       "besoldung": "A 14 LBesO",
       "besetzung": "01.08.2026 bzw. nach haushaltsrechtlicher Verfügbarkeit",
       "frist": "13.07.2026",
-      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=369.46228530681014&index=53",
+      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=856.9401355224495&index=14",
       "kategorie": "schulstellen",
       "lat": 51.4909274,
       "lon": 7.1872559,
-      "first_seen": "2026-06-29"
+      "first_seen": "2026-06-30"
     },
     {
       "titel": "Oberstudienrat/-rätin (w/m/d)",
@@ -1313,11 +697,11 @@
       "besoldung": "A 14 LBesO",
       "besetzung": "01.08.2026 bzw. nach haushaltsrechtlicher Verfügbarkeit",
       "frist": "13.07.2026",
-      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=369.46228530681014&index=54",
+      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=856.9401355224495&index=15",
       "kategorie": "schulstellen",
       "lat": 51.4818111,
       "lon": 7.2196635,
-      "first_seen": "2026-06-29"
+      "first_seen": "2026-06-30"
     },
     {
       "titel": "Oberstudienrat/-rätin (w/m/d)",
@@ -1327,11 +711,11 @@
       "besoldung": "A 14 LBesO",
       "besetzung": "01.08.2026 bzw. nach haushaltsrechtlicher Verfügbarkeit",
       "frist": "13.07.2026",
-      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=369.46228530681014&index=55",
+      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=856.9401355224495&index=16",
       "kategorie": "schulstellen",
       "lat": 51.4818111,
       "lon": 7.2196635,
-      "first_seen": "2026-06-29"
+      "first_seen": "2026-06-30"
     },
     {
       "titel": "Oberstudienrat/-rätin (w/m/d)",
@@ -1341,11 +725,11 @@
       "besoldung": "A 14 LBesO",
       "besetzung": "01.08.2026 bzw. nach haushaltsrechtlicher Verfügbarkeit",
       "frist": "13.07.2026",
-      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=369.46228530681014&index=56",
+      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=856.9401355224495&index=17",
       "kategorie": "schulstellen",
       "lat": 51.3582945,
       "lon": 7.473296,
-      "first_seen": "2026-06-29"
+      "first_seen": "2026-06-30"
     },
     {
       "titel": "Oberstudienrat/-rätin (w/m/d)",
@@ -1355,11 +739,11 @@
       "besoldung": "A 14 LBesO",
       "besetzung": "01.08.2026 bzw. nach haushaltsrechtlicher Verfügbarkeit",
       "frist": "13.07.2026",
-      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=369.46228530681014&index=57",
+      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=856.9401355224495&index=18",
       "kategorie": "schulstellen",
       "lat": 51.3582945,
       "lon": 7.473296,
-      "first_seen": "2026-06-29"
+      "first_seen": "2026-06-30"
     },
     {
       "titel": "Oberstudienrat/-rätin (w/m/d)",
@@ -1369,11 +753,11 @@
       "besoldung": "A 14 LBesO",
       "besetzung": "01.08.2026 bzw. nach haushaltsrechtlicher Verfügbarkeit",
       "frist": "13.07.2026",
-      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=369.46228530681014&index=58",
+      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=856.9401355224495&index=19",
       "kategorie": "schulstellen",
       "lat": 51.3582945,
       "lon": 7.473296,
-      "first_seen": "2026-06-29"
+      "first_seen": "2026-06-30"
     },
     {
       "titel": "Oberstudienrat/-rätin (w/m/d)",
@@ -1383,11 +767,11 @@
       "besoldung": "A 14 LBesO",
       "besetzung": "01.08.2026 bzw. nach haushaltsrechtlicher Verfügbarkeit",
       "frist": "13.07.2026",
-      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=369.46228530681014&index=59",
+      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=856.9401355224495&index=20",
       "kategorie": "schulstellen",
       "lat": 51.3582945,
       "lon": 7.473296,
-      "first_seen": "2026-06-29"
+      "first_seen": "2026-06-30"
     },
     {
       "titel": "Oberstudienrat/-rätin (w/m/d)",
@@ -1397,11 +781,11 @@
       "besoldung": "A 14 LBesO",
       "besetzung": "01.08.2026 bzw. nach haushaltsrechtlicher Verfügbarkeit",
       "frist": "13.07.2026",
-      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=369.46228530681014&index=60",
+      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=856.9401355224495&index=21",
       "kategorie": "schulstellen",
       "lat": 51.5348835,
       "lon": 7.689014,
-      "first_seen": "2026-06-29"
+      "first_seen": "2026-06-30"
     },
     {
       "titel": "Oberstudienrat/-rätin (w/m/d)",
@@ -1411,11 +795,11 @@
       "besoldung": "A 14 LBesO",
       "besetzung": "01.08.2026 bzw. nach haushaltsrechtlicher Verfügbarkeit",
       "frist": "13.07.2026",
-      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=369.46228530681014&index=61",
+      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=856.9401355224495&index=22",
       "kategorie": "schulstellen",
       "lat": 51.6114874,
       "lon": 7.5106128,
-      "first_seen": "2026-06-29"
+      "first_seen": "2026-06-30"
     },
     {
       "titel": "Oberstudienrat/-rätin (w/m/d)",
@@ -1425,11 +809,11 @@
       "besoldung": "A 14 LBesO",
       "besetzung": "01.08.2026 bzw. nach haushaltsrechtlicher Verfügbarkeit",
       "frist": "13.07.2026",
-      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=369.46228530681014&index=62",
+      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=856.9401355224495&index=23",
       "kategorie": "schulstellen",
       "lat": 51.5449336,
       "lon": 7.687678,
-      "first_seen": "2026-06-29"
+      "first_seen": "2026-06-30"
     },
     {
       "titel": "Oberstudienrat/-rätin (w/m/d)",
@@ -1439,11 +823,11 @@
       "besoldung": "A 14 LBesO",
       "besetzung": "01.08.2026 bzw. nach haushaltsrechtlicher Verfügbarkeit",
       "frist": "13.07.2026",
-      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=369.46228530681014&index=63",
+      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=856.9401355224495&index=24",
       "kategorie": "schulstellen",
       "lat": 51.5348835,
       "lon": 7.689014,
-      "first_seen": "2026-06-29"
+      "first_seen": "2026-06-30"
     },
     {
       "titel": "Oberstudienrat/-rätin (w/m/d)",
@@ -1453,11 +837,11 @@
       "besoldung": "A 14 LBesO",
       "besetzung": "01.08.2026 bzw. nach haushaltsrechtlicher Verfügbarkeit",
       "frist": "13.07.2026",
-      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=369.46228530681014&index=64",
+      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=856.9401355224495&index=25",
       "kategorie": "schulstellen",
       "lat": 51.5380394,
       "lon": 7.219985,
-      "first_seen": "2026-06-29"
+      "first_seen": "2026-06-30"
     },
     {
       "titel": "Oberstudienrat/-rätin (w/m/d)",
@@ -1467,11 +851,11 @@
       "besoldung": "A 14 LBesO",
       "besetzung": "01.08.2026 bzw. nach haushaltsrechtlicher Verfügbarkeit",
       "frist": "13.07.2026",
-      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=369.46228530681014&index=65",
+      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=856.9401355224495&index=26",
       "kategorie": "schulstellen",
       "lat": 51.5380394,
       "lon": 7.219985,
-      "first_seen": "2026-06-29"
+      "first_seen": "2026-06-30"
     },
     {
       "titel": "Oberstudienrat/-rätin (w/m/d)",
@@ -1481,11 +865,11 @@
       "besoldung": "A 14 LBesO / EG 14 TV-L",
       "besetzung": "sofort",
       "frist": "06.08.2026",
-      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=369.46228530681014&index=66",
+      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=856.9401355224495&index=27",
       "kategorie": "schulstellen",
       "lat": 51.6143815,
       "lon": 7.1978546,
-      "first_seen": "2026-06-29"
+      "first_seen": "2026-06-30"
     },
     {
       "titel": "Fachleiter/-in an einem Zentrum für schulpraktische Lehrerausbildung (w/m/d)",
@@ -1495,11 +879,11 @@
       "besoldung": "Zulage gem. § 55 Abs.1 Nr.1 Landesbesoldungsgesetz.",
       "besetzung": "01.12.2026 - vorbehaltlich der haushaltsrechtlichen Verfügbarkeit",
       "frist": "20.07.2026",
-      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=369.46228530681014&index=0",
+      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=856.9401355224495&index=0",
       "kategorie": "zfsl",
       "lat": 51.5142273,
       "lon": 7.4652789,
-      "first_seen": "2026-06-29"
+      "first_seen": "2026-06-30"
     },
     {
       "titel": "Fachleiter/-in an einem Zentrum für schulpraktische Lehrerausbildung (w/m/d)",
@@ -1509,11 +893,11 @@
       "besoldung": "Zulage gem. § 55 Abs.1 Nr.1 Landesbesoldungsgesetz.",
       "besetzung": "01.11.2026 - vorbehaltlich der haushaltsrechtlichen Verfügbarkeit",
       "frist": "20.07.2026",
-      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=369.46228530681014&index=1",
+      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=856.9401355224495&index=1",
       "kategorie": "zfsl",
       "lat": 51.5142273,
       "lon": 7.4652789,
-      "first_seen": "2026-06-29"
+      "first_seen": "2026-06-30"
     },
     {
       "titel": "Schulrat/-rätin (w/m/d)",
@@ -1523,11 +907,11 @@
       "besoldung": "A 14 Fn 3 LBesO A NRW",
       "besetzung": "01.01.2027",
       "frist": "21.07.2026",
-      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=369.46228530681014&index=0",
+      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=856.9401355224495&index=0",
       "kategorie": "schulaufsicht",
       "lat": null,
       "lon": null,
-      "first_seen": "2026-06-29"
+      "first_seen": "2026-06-30"
     },
     {
       "titel": "Referent/-in (w/m/d)",
@@ -1537,11 +921,11 @@
       "besoldung": "bis A15 LBesO",
       "besetzung": "01.10.2026",
       "frist": "05.07.2026",
-      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=369.46228530681014&index=1",
+      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=856.9401355224495&index=1",
       "kategorie": "schulaufsicht",
       "lat": null,
       "lon": null,
-      "first_seen": "2026-06-29"
+      "first_seen": "2026-06-30"
     },
     {
       "titel": "Pädagogische/-r Mitarbeiter/-in (w/m/d)",
@@ -1551,11 +935,81 @@
       "besoldung": "A 12 - A 14 LBesO A/ Entgeltgruppe 11 - 14 TV-L",
       "besetzung": "Zum nächstmöglichen Zeitpunkt",
       "frist": "31.07.2026",
-      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=369.46228530681014&index=2",
+      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=856.9401355224495&index=2",
       "kategorie": "schulaufsicht",
       "lat": null,
       "lon": null,
-      "first_seen": "2026-06-29"
+      "first_seen": "2026-06-30"
+    },
+    {
+      "titel": "Pädagogische/-r Mitarbeiter/-in (w/m/d)",
+      "beschreibung": "im Arbeitsbereich 7 - Professionalisierung I, Zentrale Entwicklungsarbeiten und Personalentwicklung in der Lehrerfortbildung, Qualitätsrahmen Fortbildung, Fortbildungsberichterstattung im neuen Fachgebiet 7.4 Lehren und Lernen in der Digitalen Welt\nDie Besetzung der Stelle erfolgt im Wege der Abordnung für zunächst ein Jahr und kann verlängert werden. Es können sich ausschließlich unbefristet beim Land NRW beschäftigte Lehrerinnen und Lehrer bzw. Lehrerinnen und Lehrer nach erfolgreich abgeschlossener Probezeit bewerben (bis A14 LBesO bzw. EG 14 TV-L).",
+      "ort": "Soest",
+      "schulname": "Qualitäts- und UnterstützungsAgentur - Landesinstitut für Schule -QUA-LiS NRW-",
+      "besoldung": "entfällt",
+      "besetzung": "01.08.2026",
+      "frist": "13.07.2026",
+      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=856.9401355224495&index=3",
+      "kategorie": "schulaufsicht",
+      "lat": null,
+      "lon": null,
+      "first_seen": "2026-06-30"
+    },
+    {
+      "titel": "Pädagogische/-r Mitarbeiter/-in (w/m/d)",
+      "beschreibung": "für das Aufgabenfeld Demokratiebildung im Arbeitsfeld 3.3  Konzepte, Handreichungen und weiterführende Unterstützungsleistungen zur Schulentwicklung in den Aufgabenfeldern Ganztag, Demokratiebildung, Reg. Vernetzung, Erziehung/Prävention sowie aufgabenbezogene Online-Angebote / webbasierte Arbeitsplattformen  des Arbeitsbereichs 3  Übergreifende schulbezogene Aufgabenfelder  im Wege der Abordnung zu besetzen\nDie Besetzung der Stelle erfolgt im Wege der Abordnung für zunächst ein Jahr und kann verlängert werden. Es können sich ausschließlich unbefristet beim Land NRW beschäftigte Lehrkräfte (bis Besoldungsgruppe A 15 LBesO und tarifbeschäftigte Lehrkräfte, bis in EG 15 EntgO TV-L NRW) nach erfolgreich abgeschlossener Probezeit bewerben.",
+      "ort": "Soest",
+      "schulname": "Qualitäts- und UnterstützungsAgentur - Landesinstitut für Schule -QUA-LiS NRW-",
+      "besoldung": "entfällt",
+      "besetzung": "zum nächstmöglichen Termin",
+      "frist": "16.07.2026",
+      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=856.9401355224495&index=4",
+      "kategorie": "schulaufsicht",
+      "lat": null,
+      "lon": null,
+      "first_seen": "2026-06-30"
+    },
+    {
+      "titel": "Fachberater/in Deutsch - Grundschule",
+      "beschreibung": "Im Schulamt für den Oberbergischen Kreis sind  zwei je 0,21 Stellen zu besetzen.",
+      "ort": "Gummersbach",
+      "schulname": "Schulamt für den Oberbergischen Kreis",
+      "besoldung": "Ab A 12 LBesG NRW  Laufbahngruppe 2.1 und 2.2 und vergleichbare Tarifbeschäftige (ab EG 11)",
+      "besetzung": "Bald möglichst",
+      "frist": "08.08.2026",
+      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=856.9401355224495&index=0",
+      "kategorie": "sonstige",
+      "lat": null,
+      "lon": null,
+      "first_seen": "2026-06-30"
+    },
+    {
+      "titel": "Fachberater/in Mathematik - Grundschule",
+      "beschreibung": "Im Schulamt für die Städteregion Aachen ist eine 10 Wochenstunden  Stelle zu besetzen.",
+      "ort": "Aachen",
+      "schulname": "Schulamt für die Städteregion Aachen",
+      "besoldung": "Ab A 12 LBesG NRW  Laufbahngruppe 2.1 und 2.2 und vergleichbare Tarifbeschäftige (ab EG 11)",
+      "besetzung": "Bald möglichst",
+      "frist": "08.08.2026",
+      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=856.9401355224495&index=1",
+      "kategorie": "sonstige",
+      "lat": null,
+      "lon": null,
+      "first_seen": "2026-06-30"
+    },
+    {
+      "titel": "Fachberater/in Mathematik - Grundschule",
+      "beschreibung": "Im Schulamt für den Kreis Heinsberg ist eine 0,43 Stelle zu besetzen.",
+      "ort": "Heinsberg",
+      "schulname": "Schulamt für den Kreis Heinsberg",
+      "besoldung": "Ab A 12 LBesG NRW  Laufbahngruppe 2.1 und 2.2 und vergleichbare Tarifbeschäftige (ab EG 11)",
+      "besetzung": "Bald möglichst",
+      "frist": "08.08.2026",
+      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=856.9401355224495&index=2",
+      "kategorie": "sonstige",
+      "lat": null,
+      "lon": null,
+      "first_seen": "2026-06-30"
     },
     {
       "titel": "Fachberater/ in Mathematik -m/w-d- Grundschule",
@@ -1565,11 +1019,11 @@
       "besoldung": "Ab A 12 LBesG NRW  Laufbahngruppe 2.1 und 2.2 und vergleichbare Tarifbeschäftigte (ab EG 11)",
       "besetzung": "ab dem 01.08.2026",
       "frist": "23.07.2026",
-      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=369.46228530681014&index=0",
+      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=856.9401355224495&index=3",
       "kategorie": "sonstige",
       "lat": null,
       "lon": null,
-      "first_seen": "2026-06-29"
+      "first_seen": "2026-06-30"
     },
     {
       "titel": "Fachberater/ in Mathematik -m/w-d- Grundschule",
@@ -1579,11 +1033,11 @@
       "besoldung": "Ab A 12 LBesG NRW  Laufbahngruppe 2.1 und 2.2 und vergleichbare Tarifbeschäftigte (ab EG 11)",
       "besetzung": "zum 01.08.2026",
       "frist": "30.06.2026",
-      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=369.46228530681014&index=1",
+      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=856.9401355224495&index=4",
       "kategorie": "sonstige",
       "lat": null,
       "lon": null,
-      "first_seen": "2026-06-29"
+      "first_seen": "2026-06-30"
     },
     {
       "titel": "päd. Mitarbeiter/ in - m,w,d - in der Geschäftsstelle Bo-digital",
@@ -1593,11 +1047,25 @@
       "besoldung": "A 13-14 BBesO bzw. die entsprechende Entgeltgruppe",
       "besetzung": "01.08.2026",
       "frist": "03.07.2026",
-      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=369.46228530681014&index=2",
+      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=856.9401355224495&index=5",
       "kategorie": "sonstige",
       "lat": null,
       "lon": null,
-      "first_seen": "2026-06-29"
+      "first_seen": "2026-06-30"
+    },
+    {
+      "titel": "Pädagogische Mitarbeiterin, Pädagogischer Mitarbeiter",
+      "beschreibung": "Pädagogische Mitarbeiterin, Pädagogischer Mitarbeiter bei NUA im Umfang einer ganzen Stelle, Abordnung vom 01.08.2026 bis zunächst 31.07.2027 mit Option der Verlängerung.",
+      "ort": "Recklinghausen",
+      "schulname": "BNE-Akademie für Natur- und Umweltschutz NRW im LANUK mit der Möglichkeit zur mobilen Arbeit",
+      "besoldung": "Eingangsamt oder erstes Beförderungsamt der Laufbahn.",
+      "besetzung": "01.08.2026",
+      "frist": "12.07.2026",
+      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=856.9401355224495&index=6",
+      "kategorie": "sonstige",
+      "lat": null,
+      "lon": null,
+      "first_seen": "2026-06-30"
     },
     {
       "titel": "Lehrer:in -w/m/d-",
@@ -1607,11 +1075,11 @@
       "besoldung": "Ab A 12 LBesG NRW  Laufbahngruppe 2.1 und 2.2 und vergleichbare Tarifbeschäftigte (ab EG 11)",
       "besetzung": "01.08.2026",
       "frist": "03.07.2026",
-      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=369.46228530681014&index=3",
+      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=856.9401355224495&index=7",
       "kategorie": "sonstige",
       "lat": null,
       "lon": null,
-      "first_seen": "2026-06-29"
+      "first_seen": "2026-06-30"
     },
     {
       "titel": "Fachberater/ in Deutsch -m/w-d- Grundschule",
@@ -1621,11 +1089,11 @@
       "besoldung": "Ab A 12 LBesG NRW  Laufbahngruppe 2.1 und 2.2 und vergleichbare Tarifbeschäftigte (ab EG 11)",
       "besetzung": "01.08.2026",
       "frist": "13.07.2026",
-      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=369.46228530681014&index=4",
+      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=856.9401355224495&index=8",
       "kategorie": "sonstige",
       "lat": null,
       "lon": null,
-      "first_seen": "2026-06-29"
+      "first_seen": "2026-06-30"
     },
     {
       "titel": "Fachberater/ in Mathematik -m/w-d- Grundschule",
@@ -1635,11 +1103,11 @@
       "besoldung": "Ab A 12 LBesG NRW  Laufbahngruppe 2.1 und 2.2 und vergleichbare Tarifbeschäftigte (ab EG 11)",
       "besetzung": "zum 01.08.2026",
       "frist": "13.07.2026",
-      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=369.46228530681014&index=5",
+      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=856.9401355224495&index=9",
       "kategorie": "sonstige",
       "lat": null,
       "lon": null,
-      "first_seen": "2026-06-29"
+      "first_seen": "2026-06-30"
     },
     {
       "titel": "Päd. Mitarbeiter/-in",
@@ -1649,11 +1117,11 @@
       "besoldung": "Besoldungsgruppen A12 und A 13 S LBesO und vergleichbare Tarifbeschäftigte",
       "besetzung": "01.08.2026",
       "frist": "01.07.2026",
-      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=369.46228530681014&index=6",
+      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=856.9401355224495&index=10",
       "kategorie": "sonstige",
       "lat": null,
       "lon": null,
-      "first_seen": "2026-06-29"
+      "first_seen": "2026-06-30"
     },
     {
       "titel": "Pädagogische/r Mitarbeiter/in -m/w/d-",
@@ -1663,11 +1131,11 @@
       "besoldung": "A 12 bis A 14 LBesO",
       "besetzung": "01.08.2026",
       "frist": "09.07.2026",
-      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=369.46228530681014&index=7",
+      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=856.9401355224495&index=11",
       "kategorie": "sonstige",
       "lat": null,
       "lon": null,
-      "first_seen": "2026-06-29"
+      "first_seen": "2026-06-30"
     },
     {
       "titel": "Dozent*in m/w/d",
@@ -1681,7 +1149,7 @@
       "kategorie": "sonstige",
       "lat": null,
       "lon": null,
-      "first_seen": "2026-06-29"
+      "first_seen": "2026-06-30"
     },
     {
       "titel": "Fachberater/ in Deutsch -m/w-d- Grundschule",
@@ -1691,11 +1159,11 @@
       "besoldung": "Ab A 12 LBesG NRW  Laufbahngruppe 2.1 und 2.2 und vergleichbare Tarifbeschäftigte (ab EG 11)",
       "besetzung": "ab dem 01.08.2026",
       "frist": "24.07.2026",
-      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=369.46228530681014&index=9",
+      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=856.9401355224495&index=13",
       "kategorie": "sonstige",
       "lat": null,
       "lon": null,
-      "first_seen": "2026-06-29"
+      "first_seen": "2026-06-30"
     },
     {
       "titel": "Fachberater/ in Mathematik -m/w-d- Grundschule",
@@ -1705,11 +1173,11 @@
       "besoldung": "Ab A 12 LBesG NRW  Laufbahngruppe 2.1 und 2.2 und vergleichbare Tarifbeschäftigte (ab EG 11)",
       "besetzung": "ab dem 01.08.2026",
       "frist": "24.07.2026",
-      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=369.46228530681014&index=10",
+      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=856.9401355224495&index=14",
       "kategorie": "sonstige",
       "lat": null,
       "lon": null,
-      "first_seen": "2026-06-29"
+      "first_seen": "2026-06-30"
     },
     {
       "titel": "abgeordnete Lehrkraft",
@@ -1719,11 +1187,11 @@
       "besoldung": "bis A 13 LBesO NRW Lbg. 2.1 bzw. entsprechende Entgeltgruppe",
       "besetzung": "01.02.2027",
       "frist": "20.07.2026",
-      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=369.46228530681014&index=11",
+      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=856.9401355224495&index=15",
       "kategorie": "sonstige",
       "lat": null,
       "lon": null,
-      "first_seen": "2026-06-29"
+      "first_seen": "2026-06-30"
     },
     {
       "titel": "abgeordnete Lehrkraft",
@@ -1733,11 +1201,11 @@
       "besoldung": "bis A 13 LBesO NRW Lbg. 2.2 bzw. entsprechende Entgeltgruppe",
       "besetzung": "01.02.2027",
       "frist": "20.07.2026",
-      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=369.46228530681014&index=12",
+      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=856.9401355224495&index=16",
       "kategorie": "sonstige",
       "lat": null,
       "lon": null,
-      "first_seen": "2026-06-29"
+      "first_seen": "2026-06-30"
     },
     {
       "titel": "abgeordnete Lehrkraft",
@@ -1747,11 +1215,11 @@
       "besoldung": "bis A 13 LBesO NRW Lbg. 2.1 und 2.2 bzw. entsprechende Entgeltgruppe",
       "besetzung": "01.02.2027",
       "frist": "20.07.2026",
-      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=369.46228530681014&index=13",
+      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=856.9401355224495&index=17",
       "kategorie": "sonstige",
       "lat": null,
       "lon": null,
-      "first_seen": "2026-06-29"
+      "first_seen": "2026-06-30"
     },
     {
       "titel": "abgeordnete Lehrkraft",
@@ -1761,11 +1229,11 @@
       "besoldung": "bis A 14 LBesO NRW  bzw. entsprechende Entgeltgruppe",
       "besetzung": "01.02.2027",
       "frist": "20.07.2026",
-      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=369.46228530681014&index=14",
+      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=856.9401355224495&index=18",
       "kategorie": "sonstige",
       "lat": null,
       "lon": null,
-      "first_seen": "2026-06-29"
+      "first_seen": "2026-06-30"
     },
     {
       "titel": "abgeordnete Lehrkraft",
@@ -1775,11 +1243,11 @@
       "besoldung": "bis A 13 LBesO NRW  bzw. entsprechende Entgeltgruppe",
       "besetzung": "01.08.2027",
       "frist": "20.07.2026",
-      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=369.46228530681014&index=15",
+      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=856.9401355224495&index=19",
       "kategorie": "sonstige",
       "lat": null,
       "lon": null,
-      "first_seen": "2026-06-29"
+      "first_seen": "2026-06-30"
     },
     {
       "titel": "Pädagogische/r Mitarbeiter/in -m/w/d-",
@@ -1789,11 +1257,11 @@
       "besoldung": "A 12 bis A 13 LBesO",
       "besetzung": "01.08.2026",
       "frist": "02.07.2026",
-      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=369.46228530681014&index=16",
+      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=856.9401355224495&index=20",
       "kategorie": "sonstige",
       "lat": null,
       "lon": null,
-      "first_seen": "2026-06-29"
+      "first_seen": "2026-06-30"
     },
     {
       "titel": "Fachberaterinnen/ Fachberater Dezernat 46 Lehrkräfte-Fortbildung",
@@ -1803,11 +1271,11 @@
       "besoldung": "A12  A14 BBesO bzw. entsprechende Entgeltgruppe TV-L.",
       "besetzung": "Nächst möglicher Zeitpunkt",
       "frist": "03.07.2026",
-      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=369.46228530681014&index=17",
+      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=856.9401355224495&index=21",
       "kategorie": "sonstige",
       "lat": null,
       "lon": null,
-      "first_seen": "2026-06-29"
+      "first_seen": "2026-06-30"
     },
     {
       "titel": "abgeordnete Lehrkraft",
@@ -1817,11 +1285,11 @@
       "besoldung": "Einsatz im Wege der Abordnung - kein Beförderungsamt",
       "besetzung": "zum nächstmöglichen Zeitpunkt, spätestens zum 1.11.2026",
       "frist": "10.07.2026",
-      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=369.46228530681014&index=18",
+      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=856.9401355224495&index=22",
       "kategorie": "sonstige",
       "lat": null,
       "lon": null,
-      "first_seen": "2026-06-29"
+      "first_seen": "2026-06-30"
     },
     {
       "titel": "Päd. Mitarbeiter:in  -w/m/d-",
@@ -1831,11 +1299,11 @@
       "besoldung": "Ab A 12 LBesG NRW  Laufbahngruppe 2.1 und 2.2 und vergleichbare Tarifbeschäftigte (ab EG 11)",
       "besetzung": "Zum nächstmöglichen Zeitpunkt",
       "frist": "21.07.2026",
-      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=369.46228530681014&index=19",
+      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=856.9401355224495&index=23",
       "kategorie": "sonstige",
       "lat": null,
       "lon": null,
-      "first_seen": "2026-06-29"
+      "first_seen": "2026-06-30"
     },
     {
       "titel": "Fachberater/in Mathematik ? Grundschule ? Unterstützung der Netzwerkarbeit im Startchancen-Programm",
@@ -1845,11 +1313,11 @@
       "besoldung": "Ab A 13 LBesG NRW  Laufbahngruppe 2.1 und 2.2 und vergleichbare Tarifbeschäftige",
       "besetzung": "Nächst möglicher Zeitpunkt",
       "frist": "14.08.2026",
-      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=369.46228530681014&index=20",
+      "url": "https://www.schulministerium.nrw.de/BiPo/Stella/online?action=856.9401355224495&index=24",
       "kategorie": "sonstige",
       "lat": null,
       "lon": null,
-      "first_seen": "2026-06-29"
+      "first_seen": "2026-06-30"
     }
   ]
 }
